@@ -69,8 +69,6 @@ a {
     cursor: pointer;
     background-image: linear-gradient(to right, #7d482a, #f5b58d);
     -webkit-background-clip: text;
-    
-    
 }
 
 #topPage .topOptions li:hover{
