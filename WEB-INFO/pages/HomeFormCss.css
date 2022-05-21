@@ -1,0 +1,227 @@
+/* 全局样式 */
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box !important;
+    user-select: none;
+    list-style: none;
+}
+a {
+	text-decoration: none;
+	outline: none;
+	color: #000;
+}
+/* 加载显示logo */
+#maxImgBg{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #fbf2db;
+    /* background-image: linear-gradient(to bottom, #a0a0a0, #e3e3e3); */
+    z-index: 10;
+}
+#maxImgBg .topImgBox{
+    width: 60%;
+    margin: 300px auto;
+}
+#maxImgBg img{
+    width: 100%;
+}
+/* 顶部栏样式 */
+#topPage{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+}
+#topPage .topLogo{
+    width: 80px;
+    height: 80px;
+    background-image: url(../../static/logo1.png);
+    background-size: 100%;
+    position: relative;
+    top: 10px;
+    left: 150px;
+    float: left;
+}
+#topPage .topTitle{
+    font-size: 1.3em;
+    font-weight: 600;
+    position: relative;
+    top: 35px;
+    left: 150px;
+}
+#topPage .topOptions{
+    height: 2em;
+    float: right;
+    position: relative;
+    top: 2.5em;
+    right: 150px;
+}
+#topPage .topOptions li{
+    float: left;
+    width: 8em;
+    height: 100px;
+    font-size: 16px;
+    list-style: none;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #7d482a, #f5b58d);
+    -webkit-background-clip: text;
+    
+    
+}
+
+#topPage .topOptions li:hover{
+    color: rgb(0 0 0 / 0%);
+    transition: color 0.3s; 
+}
+/* 顶部栏下拉框 */
+#topPage .topPageOption{
+    width:100%;
+    height: 0px;
+    padding-left: 1em;
+    background-color: white;
+    margin-top: calc(100px - 2.5em);
+    box-shadow: 0 12px 10px 0 rgb(0 0 0 / 10%);
+    border-top: 0px solid #eeeeee;
+
+    transition: height 0.3s,border-bottom 0.3s; 
+}
+#topPage .topPageOption ul{
+    width:calc(100% / 6);
+    height: 0%;
+    /* border-right: 1px solid gray; */
+    padding-left: 1em;
+    float: left ;
+    position: relative;
+    top: -1em;
+    overflow: hidden;
+    transition: height 0.3s;
+}
+#topPage .topPageOption ul li{
+    font-size: 14px;
+    clear: both;
+    height: 37px;
+    text-align: left;
+}
+#topPage .topOptions:hover .topPageOption{
+    height: 190px;
+    border-top: 2px solid #eeeeee;
+}
+#topPage .topOptions:hover .topPageOption ul{
+    height: 80%;
+}
+#topPage .topPageOption ul li a{
+    transition: color 0.3s; 
+}
+#topPage .topPageOption ul li :hover{
+    background-image: linear-gradient(to right, #7d482a, #f5b58d);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+/* 内容栏样式 标题 */
+#contentPageTitle{
+    width: 100%;
+    height: 85vh;
+    background-image: url(../../static/homeBg.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding-top: 32vh;
+}
+#contentPageTitle .bigTitle{
+    width: 650px;
+    height: auto;
+    margin: 0px auto;
+    font-size: 4em;
+    font-weight: 100;
+    color: black;
+
+    text-align: center;
+}
+#contentPageTitle .bigTitle .titleTime{
+    font-size: 0.5em;
+    position: relative;
+    top: -40px;
+}
+/* 内容栏样式 1 */
+#contentPage_1{
+    width: 100%;
+    height: 24em;
+    background-color: #eeeeee;
+}
+#contentPage_1 .pageText_1{
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-left: 500px;
+    margin-top: 110px;
+    float: left;
+}
+#contentPage_1 .pageText_1 .text_0{
+    font-weight: 600;
+}
+/* 内容栏样式 2 */
+#contentPage_2{
+    width: 63vw;
+    height: 53em;
+    background-color: white;
+    padding-top:5em;
+    margin: 0px auto;
+}
+#contentPage_2 .showBox1{
+    width: 610px;
+    height: 660px;
+    float: left;
+}
+#contentPage_2 .showText1{
+    float: right;
+    margin-top: 12em;
+}
+#contentPage_2 .showText1 .text_1,#contentPage_2 .showText1 .text_2{
+    font-size: 3em;
+    font-weight: 500;
+}
+#contentPage_2 .showText1 .text_3{
+    height: 27px;
+    font-size: 20px;
+    font-weight: 100;
+    border-bottom: 1px solid black;
+}
+#contentPage_2 .showText1 .text_4{
+    width:455px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 23px;
+}
+/* 内容栏样式 3 */
+#contentPage_3{
+    width: 63vw;
+    height: 600px;
+    margin: 0px auto;
+}
+#contentPage_3 .showBox1{
+    width: 100%;
+    height: 490px;
+    background-image: url(../../static/showImg2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+#contentPage_3 .showBox1 .text_1{
+    color:white;
+    font-size: 2.5em;
+    letter-spacing:7px;
+    position: absolute;
+    right: 130px;
+    top: 80px;
+}
+#contentPage_3 .showBox1 .text_2{
+    color:white;
+    font-size: 0.9em;
+    font-weight: 100;
+    letter-spacing:1px;
+    position: absolute;
+    right: 130px;
+    top: 150px;
+}
