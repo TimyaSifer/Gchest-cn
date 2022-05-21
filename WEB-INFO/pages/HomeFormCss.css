@@ -61,7 +61,7 @@ a {
 #topPage .topOptions li{
     float: left;
     width: 8em;
-    height: 100px;
+    height: 37px;
     font-size: 16px;
     list-style: none;
     font-weight: 200;
@@ -94,7 +94,7 @@ a {
     padding-left: 1em;
     float: left ;
     position: relative;
-    top: -2.5em;
+    top: 1em;
     overflow: hidden;
     transition: height 0.3s;
 }
