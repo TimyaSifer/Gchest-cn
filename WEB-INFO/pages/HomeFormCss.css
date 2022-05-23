@@ -239,6 +239,24 @@ a {
 /* 底部样式 */
 #bottomPage{
     width: 100%;
-    height: 50vh;
+    height: 10vh;
     background-color: #eeeeee;
+    padding-top: 30px;
+}
+#bottomPage .textBox{
+    width: 63vw;
+    height: 100%;
+    margin: 0px auto;
+}
+#bottomPage .textBox .textBG{
+    width: auto;
+    height: 14px;
+    float: right;
+}  
+#bottomPage span,#bottomPage a{
+    color: gray;
+    font-size: 14px;
+}
+#bottomPage a:hover{
+    text-decoration: underline;
 }
