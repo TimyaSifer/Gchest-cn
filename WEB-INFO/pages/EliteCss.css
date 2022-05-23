@@ -1,0 +1,85 @@
+/* 复杂颜色定义 */
+*{
+    --list_text:linear-gradient(to bottom, transparent, white 85%);
+    --skin:#9C0006;
+}
+/* 标题样式 */
+#show_title{
+    width: 100%;
+    height: 100px;
+    font-size: 3em;
+    font-weight: 200;
+    padding-left: 100px;
+    line-height: 200%;
+    background-color: #eeeeee;
+}
+/* 展示盒样式 */
+#show_box_elite{
+    width: 100%;
+    height: calc(100vh - 140px);
+    background-color: #eeeeee;
+}
+
+/* 展示列表样式 */
+#show_box_elite ul{
+    margin: 0px auto;
+    width: 90vw;
+}
+#show_box_elite ul li{
+    width: 400px;
+    height: 250px;
+    background-color: #eeeeee;
+    border-left: 10px solid var(--skin);
+    box-shadow: 0 0 5px rgb(0 0 0 / 40%);
+    margin: 15px;
+    cursor: pointer;
+    float: left;
+}
+#show_box_elite ul li div:first-child{
+    width: 100%;
+    height: 70%;
+    position: relative;
+    overflow: hidden;
+    /* background-image: url(../../static/showUndefined.png);
+    background-size: 100%;
+    background-position: center; */
+}
+#show_box_elite ul li div:first-child img{
+    width: 100%;
+    position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+}
+#show_box_elite ul li div:last-child{
+    width: 100%;
+    height: 30%;
+    background-size: 100%;
+    background-position: center;
+    background-color: white;
+    position: relative;
+}
+#show_box_elite ul li div div:first-child{
+    width: 100%;
+    height: 50%;
+    border-bottom: 1px solid #eeeeee;
+    background-image: none;
+    background-size: 100%;
+    background-position: center;
+    padding-left: 10px;
+
+    color: var(--skin);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 35px;
+}
+#show_box_elite ul li div span{
+    padding-left: 10px;
+    font-size:14px;
+    line-height: 35px;
+}
+#show_box_elite ul li div span:last-child{
+    padding-left: 0px;
+}

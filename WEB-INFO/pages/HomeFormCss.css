@@ -12,6 +12,10 @@ a {
 	outline: none;
 	color: #000;
 }
+/* 复杂颜色定义 */
+*{
+    --list_Check_Color:linear-gradient(to right, #7d482a, #f5b58d);
+}
 /* 加载显示logo */
 #maxImgBg{
     width: 100%;
@@ -67,7 +71,7 @@ a {
     font-weight: 200;
     text-align: center;
     cursor: pointer;
-    background-image: linear-gradient(to right, #7d482a, #f5b58d);
+    background-image:var(--list_Check_Color) ;
     -webkit-background-clip: text;
 }
 
@@ -115,7 +119,7 @@ a {
     transition: color 0.3s; 
 }
 #topPage .topPageOption ul li :hover{
-    background-image: linear-gradient(to right, #7d482a, #f5b58d);
+    background-image: var(--list_Check_Color);
     -webkit-background-clip: text;
     color: transparent;
 }
