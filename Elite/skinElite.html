@@ -80,40 +80,46 @@
     <!-- 内容栏 -->
     <div id="show_box_elite">
         <ul>
-            <li>
-                <div>
-                    <img src="https://attachment.mcbbs.net/data/myattachment/forum/202108/10/183734twsz5znzwb5xowwx.png"
-                        onerror="this.src='../static/showUndefined.png'">
-                </div>
-                <div>
-                    <div title="测试标题">测试标题</div>
-                    <span>作者：</span>
-                    <span>测试</span>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <img src="https:" onerror="this.src='../static/showUndefined.png'">
-                </div>
-                <div>
-                    <div title="测试标题">测试标题</div>
-                    <span>作者：</span>
-                    <span>测试</span>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <img src="https://attachment.mcbbs.net" onerror="this.src='../static/showUndefined.png'">
-                </div>
-                <div>
-                    <div title="测试标题">测试标题</div>
-                    <span>作者：</span>
-                    <span>测试</span>
-                </div>
-            </li>
+            <a target="_blank">
+                <li>
+                    <div>
+                        <img onerror="this.src='../static/showUndefined.png'">
+                    </div>
+                    <div>
+                        <div>标题</div>
+                        <span>作者</span>
+                        <span class="skinTime">日期</span>
+                    </div>
+                </li>
+            </a>
         </ul>
     </div>
 
 </body>
+<script>
+    // 皮肤类
+    class skin {
+        constructor(skinUrl, skinName, skinImg, skinCreate,skinTime) {
+            this.skinUrl = skinUrl;
+            this.skinName = skinName;
+            this.skinImg = skinImg;
+            this.skinCreate = skinCreate;
+            this.skinTime = skinTime;
+        }
+    }
+
+    // 类使用测试
+    let skin1 = new skin("https://www.mcbbs.net/thread-1242641-1-1.html", "随手乱画Ⅵ 寒柏",
+        "https://attachment.mcbbs.net/data/myattachment/forum/202108/10/183734twsz5znzwb5xowwx.png", "暗夜","2021/08/10");
+
+    var skinArr = $("#show_box_elite ul a");
+
+    $(skinArr[0]).attr('href', skin1.skinUrl);
+    $(skinArr[0]).attr('title', skin1.skinName);
+    $($(skinArr[0]).children()[0].children[0].children[0]).attr('src', skin1.skinImg);
+    $($(skinArr[0]).children()[0].children[1].children[0]).text(skin1.skinName);
+    $($(skinArr[0]).children()[0].children[1].children[1]).text("作者：" + skin1.skinCreate);
+    $($(skinArr[0]).children()[0].children[1].children[2]).text(skin1.skinTime);
+</script>
 
 </html>

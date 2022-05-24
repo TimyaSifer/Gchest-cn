@@ -80,6 +80,8 @@
     font-size:14px;
     line-height: 35px;
 }
-#show_box_elite ul li div span:last-child{
-    padding-left: 0px;
+#show_box_elite ul li div .skinTime{
+    float: right;
+    padding-right: 10px;
+    color: gray;
 }
