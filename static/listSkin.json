@@ -1,0 +1,26 @@
+[
+    {
+        "year": 2011,
+        "province": "湖北",
+        "city": "武汉",
+        "housingprise": 7954
+    },
+    {
+        "year": 2011,
+        "province": "河南",
+        "city": "郑州",
+        "housingprise": 6566
+    },
+    {
+        "year": 2020,
+        "province": "湖北",
+        "city": "武汉",
+        "housingprise": 15998
+    },
+    {
+        "year": 2020,
+        "province": "河南",
+        "city": "郑州",
+        "housingprise": 13597
+    }
+]
