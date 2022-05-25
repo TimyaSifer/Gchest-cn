@@ -121,14 +121,11 @@
     }
 
     // 类使用测试
-    $.ajax({
-        url: "static/listSkin.json",
-        type: "GET",
-        dataType: "json",
-        success: function (data) {
-            displayData(data)
-        }
-    });
+    var Ajax = function () {
+            $.getJSON("static/listSkin.json", function (data) {
+                displayData(data)//传入一个函数
+            });
+        }();
 
     var displayData = function (data) {
         console.log(data);
