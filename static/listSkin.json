@@ -1,26 +1,16 @@
 [
     {
-        "year": 2011,
-        "province": "湖北",
-        "city": "武汉",
-        "housingprise": 7954
+        "url": "https://www.mcbbs.net/thread-1242641-1-1.html",
+        "skinName": "随手乱画Ⅵ 寒柏",
+        "skinImg": "https://attachment.mcbbs.net/data/myattachment/forum/202108/10/183734twsz5znzwb5xowwx.png",
+        "skinCreate": "暗夜",
+        "skinTime": "2021/8/10"
     },
     {
-        "year": 2011,
-        "province": "河南",
-        "city": "郑州",
-        "housingprise": 6566
-    },
-    {
-        "year": 2020,
-        "province": "湖北",
-        "city": "武汉",
-        "housingprise": 15998
-    },
-    {
-        "year": 2020,
-        "province": "河南",
-        "city": "郑州",
-        "housingprise": 13597
+        "url": "https://www.mcbbs.net/thread-1166621-1-1.html",
+        "skinName": "随手乱画·焰",
+        "skinImg": "https://attachment.mcbbs.net/data/myattachment/forum/202102/08/043155qs33joaezmyxje9e.jpg",
+        "skinCreate": "暗夜",
+        "skinTime": "2021/2/9"
     }
 ]
