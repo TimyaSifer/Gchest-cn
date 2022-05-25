@@ -12,49 +12,39 @@
 <body>
     <h1>测试</h1>
     <script>
-        // //方法1
-        // var data =  $.parseJSON($.ajax({
-        //     url: "static/listSkin.json",//json文件位置，文件名
-        //     dataType: "json", //返回数据格式为json
-        //     async: false
-        // }).responseText);
-        // console.log(data);
-        // //此方法会报错：主线程中同步的 XMLHttpRequest 已不推荐使用，因其对终端用户的用户体验存在负面影响
+        //方法1
+        var data =  $.parseJSON($.ajax({
+            url: "static/listSkin.json",//json文件位置，文件名
+            dataType: "json", //返回数据格式为json
+            async: false
+        }).responseText);
+        console.log(data);
+        //此方法会报错：主线程中同步的 XMLHttpRequest 已不推荐使用，因其对终端用户的用户体验存在负面影响
 
-        // //方法二
-        // var Ajax = function () {
-        //     $.getJSON("static/listSkin.json", function (data) {
-        //         displayData(data)//传入一个函数
-        //     });
-        // }();
-        // //此方法只能在内部访问数据
-
-        // var displayData= function(data){
-        //     console.log(data);
-        // }
-
-        //方法三
+        //方法二
         var Ajax = function () {
             $.getJSON("static/listSkin.json", function (data) {
-                $.each(data, function (i, item) {
-                    console.log(item.name);
-                });
+                displayData(data)//传入一个函数
             });
         }();
+        //此方法只能在内部访问数据
 
+        var displayData= function(data){
+            console.log(data);
+        }
+
+        //方法三
         $.ajax({
-            url: "static/listSkin.json", //json文件位置，文件名
-            type: "GET", //请求方式为get
-            dataType: "json", //返回数据格式为json
-            success: function (data) { //请求成功完成后要执行的方法 
-                //给info赋值给定义好的变量
-                var pageData = data;
-                for (var i = 0; i < data.length; i++) {
-                    console.log(pageData[i].name);
-                }
+            url: "static/listSkin.json",
+            type: "GET",
+            dataType: "json",
+            success: 
+            function (data) {
+                displayData(data)
             }
-        })
+        });
         //类似于方法二
+
     </script>
 </body>
 
