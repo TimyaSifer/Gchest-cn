@@ -1,26 +1,22 @@
 [
     {
-        "year": 2011,
-        "province": "湖北",
-        "city": "武汉",
-        "housingprise": 7954
+        "num": 01,
+        "name": "测试1",
+        "url": "测试1",
     },
     {
-        "year": 2011,
-        "province": "河南",
-        "city": "郑州",
-        "housingprise": 6566
+        "num": 02,
+        "name": "测试2",
+        "url": "测试2",
     },
     {
-        "year": 2020,
-        "province": "湖北",
-        "city": "武汉",
-        "housingprise": 15998
+        "num": 03,
+        "name": "测试3",
+        "url": "测试3",
     },
     {
-        "year": 2020,
-        "province": "河南",
-        "city": "郑州",
-        "housingprise": 13597
+        "num": 04,
+        "name": "测试4",
+        "url": "测试4",
     }
 ]
