@@ -133,9 +133,8 @@
     
 
     var displayData = function (data) {
-        console.log(data);
-        console.log(Object.keys(data).lenght());
-        console.log(Object.keys(data));
+        var objLenght = Object.keys(data);
+        console.log(objLenght.lenght);
         for (var i in data) {
 
             let _skin = new skin(data[i].url, data[i].skinName, data[i].skinImg, data[i].skinCreate, data[i]
