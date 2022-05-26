@@ -136,7 +136,12 @@
         var objLenght = Object.keys(data);
         console.log(objLenght);
         console.log(objLenght.lenght);
-        console.log(objLenght.lenght());
+        console.log(Object.getOwnPropertyNames(data).length);
+        var objLen =0;
+ for(var i in data){
+	objLen++;
+ } 
+        console.log(objLen);
         for (var i in data) {
 
             let _skin = new skin(data[i].url, data[i].skinName, data[i].skinImg, data[i].skinCreate, data[i]
