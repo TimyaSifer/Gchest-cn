@@ -13,7 +13,7 @@ var objArr = $("#show_box_elite ul a");
 
 
 // 自动填充json对象
-var Ajax = function () {
+var Ajax = function (type) {
     $.getJSON(type, function (data) {
         displayData(data); //传入一个函数
     });
