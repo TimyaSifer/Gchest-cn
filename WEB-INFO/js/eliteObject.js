@@ -15,8 +15,8 @@ var objArr = $("#show_box_elite ul a");
 
 
 // 自动填充json对象
-var Ajax = function (jsonType) {
-    $.getJSON(jsonType, function (data) {
+var Ajax = function () {
+    $.getJSON("../static/listSkin.json", function (data) {
         displayData(data); //传入一个函数
     });
 }();
