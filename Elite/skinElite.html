@@ -139,12 +139,12 @@ var displayData = function (data) {
         let _object = new eliteObject(data[i].url, data[i].skinName, data[i].skinImg, data[i].skinCreate, data[i]
             .skinTime);
         $(objArr[i]).attr('target', "_blank");
-        $(objArr[i]).attr('href', _object.skinUrl);
-        $(objArr[i]).attr('title', _object.skinName);
-        $($(objArr[i]).children()[0].children[0].children[0]).attr('src', _object.skinImg);
-        $($(objArr[i]).children()[0].children[1].children[0]).text(_object.skinName);
+        $(objArr[i]).attr('href', _object.objUrl);
+        $(objArr[i]).attr('title', _object.objName);
+        $($(objArr[i]).children()[0].children[0].children[0]).attr('src', _object.objImg);
+        $($(objArr[i]).children()[0].children[1].children[0]).text(_object.objName);
         $($(objArr[i]).children()[0].children[1].children[1]).text("作者：" + _object.skinCreate);
-        $($(objArr[i]).children()[0].children[1].children[2]).text(_object.skinTime);
+        $($(objArr[i]).children()[0].children[1].children[2]).text(_object.objTime);
     }
 
 }
