@@ -1,3 +1,7 @@
+/* 全局设置 */
+body{
+    background-color: #eeeeee;
+}
 /* 复杂颜色定义 */
 *{
     --list_text:linear-gradient(to bottom, transparent, white 85%);
@@ -16,8 +20,6 @@
 /* 展示盒样式 */
 #show_box_elite{
     width: 100%;
-    height: calc(100vh - 140px);
-    background-color: #eeeeee;
 }
 
 /* 展示列表样式 */
@@ -45,6 +47,7 @@
     background-position: center; */
 }
 #show_box_elite ul li div:first-child img{
+    width: 100%;
     position: absolute;
       margin: auto;
       left: 0;
