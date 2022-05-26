@@ -120,34 +120,37 @@
         }
     }
 
+    var skinArr = $("#show_box_elite ul a");
+
+    var listMod="<a target='_blank'><li> <div><img onerror='this.src=../static/showUndefined.png'> </div><div><div>标题</div><span>作者</span><span class='skinTime'>日期</span></div></li></a>";
+
     // 类使用测试
     var Ajax = function () {
-            $.getJSON("../static/listSkin.json", function (data) {
-                displayData(data)//传入一个函数
-            });
-        }();
-var skinArr = $("#show_box_elite ul a");
+        $.getJSON("../static/listSkin.json", function (data) {
+            displayData(data) //传入一个函数
+        });
+    }();
+    
     var displayData = function (data) {
         console.log(data);
 
         console.log(data[0].skinCreate);
-        
+
         for (var i in data) {
-        
-        let _skin = new skin(data[i].url,data[i].skinName,data[i].skinImg,data[i].skinCreate,data[i].skinTime);
-$(skinArr[i]).attr('href', _skin.skinUrl);
-    $(skinArr[i]).attr('title', _skin.skinName);
-    $($(skinArr[i]).children()[0].children[0].children[0]).attr('src', _skin.skinImg);
-    $($(skinArr[i]).children()[0].children[1].children[0]).text(_skin.skinName);
-    $($(skinArr[i]).children()[0].children[1].children[1]).text("作者：" + _skin.skinCreate);
-    $($(skinArr[i]).children()[0].children[1].children[2]).text(_skin.skinTime);
+
+            skinArr[0].prepend(listMod);
+
+            let _skin = new skin(data[i].url, data[i].skinName, data[i].skinImg, data[i].skinCreate, data[i]
+                .skinTime);
+            $(skinArr[i]).attr('href', _skin.skinUrl);
+            $(skinArr[i]).attr('title', _skin.skinName);
+            $($(skinArr[i]).children()[0].children[0].children[0]).attr('src', _skin.skinImg);
+            $($(skinArr[i]).children()[0].children[1].children[0]).text(_skin.skinName);
+            $($(skinArr[i]).children()[0].children[1].children[1]).text("作者：" + _skin.skinCreate);
+            $($(skinArr[i]).children()[0].children[1].children[2]).text(_skin.skinTime);
+        }
+
     }
-
-
-        
-    }
-
-
 </script>
 
 </html>
