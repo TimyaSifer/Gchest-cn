@@ -117,7 +117,7 @@
         });
     }();
     
-    for (let i = 0; i < data.lenght; i++) {
+    for (let i = 0; i < 20; i++) {
 
         var listMod = document.createElement("a"); // 以 DOM 创建新元素
 
@@ -126,6 +126,10 @@
         $("#show_box_elite ul").prepend(listMod);
 
     }
+    
+    skinArr = $("#show_box_elite ul a");
+    
+    console.log(data.lenght)
     
     var displayData = function (data) {
 
