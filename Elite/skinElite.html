@@ -136,7 +136,7 @@ var displayData = function (data) {
     // 填充展示框
     for (var i in data) {
 
-        let _object = new skin(data[i].url, data[i].skinName, data[i].skinImg, data[i].skinCreate, data[i]
+        let _object = new eliteObject(data[i].url, data[i].skinName, data[i].skinImg, data[i].skinCreate, data[i]
             .skinTime);
         $(objArr[i]).attr('target', "_blank");
         $(objArr[i]).attr('href', _object.skinUrl);
