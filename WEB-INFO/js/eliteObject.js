@@ -1,4 +1,4 @@
-function objFuc(){
+function objFuc(jsonType){
     
     
 
@@ -18,7 +18,7 @@ var objArr = $("#show_box_elite ul a");
 
 // 自动填充json对象
 var Ajax = function () {
-    $.getJSON("../static/listSkin.json", function (data) {
+    $.getJSON(jsonType, function (data) {
         displayData(data); //传入一个函数
     });
 }();
