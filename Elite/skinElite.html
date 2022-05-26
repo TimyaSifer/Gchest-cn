@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>黄金之匣 | 菁英皮肤合集</title>
+    <title>菁英皮肤合集</title>
 
     <link rel="shortcut icon" href="../static/pageIco.ico">
 
@@ -80,30 +80,6 @@
     <!-- 内容栏 -->
     <div id="show_box_elite">
         <ul>
-            <a target="_blank">
-                <li>
-                    <div>
-                        <img onerror="this.src='../static/showUndefined.png'">
-                    </div>
-                    <div>
-                        <div>标题</div>
-                        <span>作者</span>
-                        <span class="skinTime">日期</span>
-                    </div>
-                </li>
-            </a>
-            <a target="_blank">
-                <li>
-                    <div>
-                        <img onerror="this.src='../static/showUndefined.png'">
-                    </div>
-                    <div>
-                        <div>标题</div>
-                        <span>作者</span>
-                        <span class="skinTime">日期</span>
-                    </div>
-                </li>
-            </a>
         </ul>
     </div>
 
@@ -120,38 +96,54 @@
         }
     }
 
-    // 类使用测试
-    $.ajax({
-        url: "static/listSkin.json",
-        type: "GET",
-        dataType: "json",
-        success: function (data) {
-            displayData(data)
-        }
-    });
-
-    var displayData = function (data) {
-        console.log(data);
-    }
-
-    let skin1 = new skin(data[0].url,data[0].skinName,data[0].skinImg,data[0].skinCreate,data[0].skinTime);
-    let skin2 = new skin(data[1].url,data[1].skinName,data[1].skinImg,data[1].skinCreate,data[1].skinTime);
-
     var skinArr = $("#show_box_elite ul a");
 
-    $(skinArr[0]).attr('href', skin1.skinUrl);
-    $(skinArr[0]).attr('title', skin1.skinName);
-    $($(skinArr[0]).children()[0].children[0].children[0]).attr('src', skin1.skinImg);
-    $($(skinArr[0]).children()[0].children[1].children[0]).text(skin1.skinName);
-    $($(skinArr[0]).children()[0].children[1].children[1]).text("作者：" + skin1.skinCreate);
-    $($(skinArr[0]).children()[0].children[1].children[2]).text(skin1.skinTime);
 
-    $(skinArr[1]).attr('href', skin2.skinUrl);
-    $(skinArr[1]).attr('title', skin2.skinName);
-    $($(skinArr[1]).children()[0].children[0].children[0]).attr('src', skin2.skinImg);
-    $($(skinArr[1]).children()[0].children[1].children[0]).text(skin2.skinName);
-    $($(skinArr[1]).children()[0].children[1].children[1]).text("作者：" + skin2.skinCreate);
-    $($(skinArr[1]).children()[0].children[1].children[2]).text(skin2.skinTime);
+    // 自动填充json对象
+    var Ajax = function () {
+        $.getJSON("../static/listSkin.json", function (data) {
+            displayData(data); //传入一个函数
+        });
+    }();
+
+
+    var displayData = function (data) {
+        // 计算json对象长度
+        var objLenght = Object.keys(data);
+
+        var objLen = 0;
+        for (var i in data) {
+            objLen++;
+        }
+
+        // 添加展示框元素
+        for (let i = 0; i < objLen; i++) {
+
+            var listMod = document.createElement("a"); // 以 DOM 创建新元素
+
+            listMod.innerHTML =
+                "<li><div><img onerror='this.src=../static/showUndefined.png'></div><div><div>标题</div><span>作者</span><span class='skinTime'>日期</span></div></li>";
+            $("#show_box_elite ul").prepend(listMod);
+        }
+
+        // 重载所有展示框
+        skinArr = $("#show_box_elite ul a");
+
+        // 填充展示框
+        for (var i in data) {
+
+            let _skin = new skin(data[i].url, data[i].skinName, data[i].skinImg, data[i].skinCreate, data[i]
+                .skinTime);
+            $(skinArr[i]).attr('target', "_blank");
+            $(skinArr[i]).attr('href', _skin.skinUrl);
+            $(skinArr[i]).attr('title', _skin.skinName);
+            $($(skinArr[i]).children()[0].children[0].children[0]).attr('src', _skin.skinImg);
+            $($(skinArr[i]).children()[0].children[1].children[0]).text(_skin.skinName);
+            $($(skinArr[i]).children()[0].children[1].children[1]).text("作者：" + _skin.skinCreate);
+            $($(skinArr[i]).children()[0].children[1].children[2]).text(_skin.skinTime);
+        }
+
+    }
 </script>
 
 </html>
