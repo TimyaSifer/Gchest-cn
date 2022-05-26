@@ -110,13 +110,6 @@
 
     var skinArr = $("#show_box_elite ul a");
 
-    // 类使用测试
-    var Ajax = function () {
-        $.getJSON("../static/listSkin.json", function (data) {
-            displayData(data) //传入一个函数
-        });
-    }();
-    
     for (let i = 0; i < 20; i++) {
 
         var listMod = document.createElement("a"); // 以 DOM 创建新元素
@@ -126,11 +119,17 @@
         $("#show_box_elite ul").prepend(listMod);
 
     }
-    
+
+    // 自动填充json对象
+    var Ajax = function () {
+        $.getJSON("../static/listSkin.json", function (data) {
+            displayData(data) //传入一个函数
+        });
+    }();
+
     skinArr = $("#show_box_elite ul a");
-    
-    console.log(data.lenght)
-    
+    console.log(data.lenght);
+
     var displayData = function (data) {
 
         for (var i in data) {
