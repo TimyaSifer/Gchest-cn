@@ -1,4 +1,6 @@
-
+function objFuc(jsonType){
+    
+    
 
     // 构造函数
 class eliteObject {
@@ -57,5 +59,7 @@ var displayData = function (data) {
         $($(objArr[i]).children()[0].children[1].children[1]).text("作者：" + _object.objCreate);
         $($(objArr[i]).children()[0].children[1].children[2]).text(_object.objTime);
     }
+
+}
 
 }
