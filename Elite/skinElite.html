@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 
 <head>
     <meta charset="UTF-8">
@@ -16,13 +16,6 @@
     <link rel="stylesheet" href="../WEB-INFO/pages/skinCss.css">
 
     <script type="text/javascript" src="../WEB-INFO/js/homeFormJsCode.js"></script>
-
-    <!-- json填充方法 -->
-    <script>
-        //json文件路径
-        var type = "../static/listSkin.json";
-    </script>
-    <script type="text/javascript" src="../WEB-INFO/js/eliteObject.js"></script> 
 </head>
 
 <body>
@@ -91,5 +84,10 @@
     </div>
 
 </body>
-
-</html>
+<!-- json自动填充list方法 -->
+<script type="text/javascript" src="../WEB-INFO/js/eliteObject.js"></script>
+<script>
+    //定义json路径变量
+    var jsonType = "../static/listSkin.json";
+    objFuc(jsonType);
+</script>

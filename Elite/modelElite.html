@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>优秀文字作品</title>
+    <title>菁英模型预制</title>
 
     <link rel="shortcut icon" href="../static/pageIco.ico">
 
@@ -22,7 +22,7 @@
         //json文件路径
         var type = "../static/listModel.json";
     </script>
-    <script type="text/javascript" src="../WEB-INFO/js/eliteObject.js"></script> 
+    <script type="text/javascript" src="../WEB-INFO/js/eliteObject.js"></script>
 </head>
 
 <body>
@@ -81,7 +81,7 @@
 
     <!-- 标题 -->
     <div id="show_title">
-        精选文字创作
+        菁英 模型预制档案
     </div>
 
     <!-- 内容栏 -->
@@ -91,6 +91,12 @@
     </div>
 
 </body>
-
+<!-- json自动填充list方法 -->
+<script type="text/javascript" src="../WEB-INFO/js/eliteObject.js"></script>
+<script>
+    //定义json路径变量
+    var jsonType = "../static/listModel.json";
+    objFuc(jsonType);
+</script>
 
 </html>
