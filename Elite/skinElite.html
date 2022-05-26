@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>黄金之匣 | 菁英皮肤合集</title>
+    <title>菁英皮肤合集</title>
 
     <link rel="shortcut icon" href="../static/pageIco.ico">
 
@@ -92,18 +92,6 @@
                     </div>
                 </li>
             </a>
-            <a target="_blank">
-                <li>
-                    <div>
-                        <img onerror="this.src='../static/showUndefined.png'">
-                    </div>
-                    <div>
-                        <div>标题</div>
-                        <span>作者</span>
-                        <span class="skinTime">日期</span>
-                    </div>
-                </li>
-            </a>
         </ul>
     </div>
 
@@ -122,7 +110,15 @@
 
     var skinArr = $("#show_box_elite ul a");
 
-    var listMod="<a target='_blank'><li> <div><img onerror='this.src=../static/showUndefined.png'> </div><div><div>标题</div><span>作者</span><span class='skinTime'>日期</span></div></li></a>";
+    for (let i = 0; i < 20; i++) {
+
+        var listMod = document.createElement("a"); // 以 DOM 创建新元素
+
+        listMod.innerHTML =
+            "<li><div><img onerror='this.src=../static/showUndefined.png'></div><div><div>标题</div><span>作者</span><span class='skinTime'>日期</span></div></li>";
+        $("#show_box_elite ul").prepend(listMod);
+
+    }
 
     // 类使用测试
     var Ajax = function () {
@@ -130,18 +126,14 @@
             displayData(data) //传入一个函数
         });
     }();
-    
-    var displayData = function (data) {
-        console.log(data);
 
-        console.log(data[0].skinCreate);
+    var displayData = function (data) {
 
         for (var i in data) {
 
-            skinArr[0].prepend(listMod);
-
             let _skin = new skin(data[i].url, data[i].skinName, data[i].skinImg, data[i].skinCreate, data[i]
                 .skinTime);
+            $(skinArr[i]).attr('target', "_blank");
             $(skinArr[i]).attr('href', _skin.skinUrl);
             $(skinArr[i]).attr('title', _skin.skinName);
             $($(skinArr[i]).children()[0].children[0].children[0]).attr('src', _skin.skinImg);
