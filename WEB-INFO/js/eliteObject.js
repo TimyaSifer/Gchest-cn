@@ -37,7 +37,7 @@ function objFuc(jsonType) {
             var listMod = document.createElement("a"); // 以 DOM 创建新元素
 
             listMod.innerHTML =
-                "<li><div><img onerror='this.src=../static/showUndefined.png'></div><div><div>标题</div><span>作者</span><span class='skinTime'>日期</span></div></li>";
+                "<li><div><img onerror=this.src='../static/showUndefined.png'></div><div><div>标题</div><span>作者</span><span class='skinTime'>日期</span></div></li>";
             $("#show_box_elite ul").prepend(listMod);
         }
 
