@@ -5,7 +5,6 @@ body{
 /* 复杂颜色定义 */
 *{
     --list_text:linear-gradient(to bottom, transparent, white 85%);
-    --skin:#9C0006;
 }
 /* 标题样式 */
 #show_title{
