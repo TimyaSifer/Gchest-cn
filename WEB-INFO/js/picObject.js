@@ -45,9 +45,9 @@ function objFuc(jsonType) {
         for (var i in data) {
 
             let _object = new eliteObject(data[i].url, data[i].Create, data[i].Time);
-            $($(objArr[i]).children[0].children[0]).attr('src', _object.objUrl);
-            $($(objArr[i]).children[1].children[0]).text(_object.objCreate);
-            $($(objArr[i]).children[1].children[1]).text(_object.objTime);
+            $($(objArr[i]).children()[0].children[0]).attr('src', _object.objUrl);
+            $($(objArr[i]).children()[1].children[0]).text(_object.objCreate);
+            $($(objArr[i]).children()[1].children[1]).text(_object.objTime);
         }
 
     }
