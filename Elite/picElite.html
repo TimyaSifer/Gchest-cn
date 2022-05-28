@@ -90,7 +90,7 @@
                 <div>
                     <img
                         src="https://attachment.mcbbs.net/data/myattachment/forum/202111/19/024927ee88826qpves69ae.png">
-                    <div class="btnQuin"></div>
+                    <div class="btnQuin">×</div>
                 </div>
             </div>
         </div>
@@ -100,7 +100,7 @@
         <ul>
             <li>
                 <div>
-                    <img src="https://s1.ax1x.com/2022/05/27/XZIfSS.png">
+                    <img>
                 </div>
                 <div>
                     <span>作者</span>
@@ -112,76 +112,11 @@
 
 </body>
 <!-- json自动填充list方法 -->
-<!-- <script type="text/javascript" src="../WEB-INFO/js/eliteObject.js"></script>
+<script type="text/javascript" src="../WEB-INFO/js/picObject.js"></script>
 <script>
     //定义json路径变量
-    var jsonType = "../static/listStory.json";
+    var jsonType = "../static/listPic.json";
     objFuc(jsonType);
-</script> -->
-
-<script>
-    // 初始化
-    $("#picMask").fadeOut(0);
-    // 点击查看大图
-    $("#show_box_elite ul li div img").click(function () {
-        $("#bigPic div img").attr("src", this.src);
-        $("#picMask").fadeIn(300);
-    })
-    //点击按钮或遮罩关闭大图
-    $("#picMask,#picMask .picDrag,#bigPic div .btnQuin").click(function () {
-        $("#picMask").fadeOut(300);
-        setTimeout(function () {
-            $("#picMask .picDrag").css({
-                "left": "0px",
-                "top": "0px"
-            });
-            $("#bigPic div img").css("zoom", "100%");
-        }, 300)
-    })
-    $("#bigPic,#bigPic div img,#bigPic div").click(function (e) {
-        e.stopPropagation();
-    })
-
-    // 滚轮缩放方法
-    $(function () {
-        function zoomImg(o) {
-            var zoom = parseInt(o.style.zoom, 10) || 100;
-            zoom += event.wheelDelta / 5; //可适合修改
-            if (zoom > 0) o.style.zoom = zoom + '%';
-        }
-        $(document).ready(function () {
-            $("img").bind("mousewheel",
-                function () {
-                    zoomImg(this);
-                    return false;
-                });
-        });
-    })
-
-
-    // 鼠标拖拽方法
-    $('#picMask .picDrag').mousedown(function (event) {
-        deltax = event.clientX - $(this).offset().left
-        deltay = event.clientY - $(this).offset().top
-        $(document).bind('mousemove', start)
-        $(document).bind('mouseup', end)
-        return false
-    })
-
-    function start(event) {
-        x = event.clientX - deltax
-        y = event.clientY - deltay
-        $('#picMask .picDrag').css({
-            'left': x + 'px',
-            'top': y + 'px'
-        })
-        return false
-    }
-
-    function end(event) {
-        $(this).unbind('mousemove')
-        $(this).unbind('mouseup')
-    }
 </script>
 
 </html>
