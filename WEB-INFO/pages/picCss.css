@@ -68,11 +68,11 @@ body {
     height: 25px;
     border-radius: 50%;
     margin: 2px auto;
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     background-color: #efefef;
     line-height: 60%;
     text-align: center;
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: 100;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: gray;

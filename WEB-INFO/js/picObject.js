@@ -1,15 +1,15 @@
 function objFuc(jsonType) {
 
     // 构造函数
-    class picObject {
-        constructor(objUrl, objImg, objCreate,) {
+    class eliteObject {
+        constructor(objUrl, objCreate, objTime) {
             this.objUrl = objUrl;
-            this.objImg = objImg;
             this.objCreate = objCreate;
+            this.objTime = objTime;
         }
     }
 
-    var objArr = $("#show_box_elite ul a");
+    var objArr = $("#show_box_elite ul li");
 
 
     // 自动填充json对象
@@ -32,30 +32,89 @@ function objFuc(jsonType) {
         // 添加展示框元素
         for (let i = 0; i < objLen; i++) {
 
-            var listMod = document.createElement("a"); // 以 DOM 创建新元素
+            var listMod = document.createElement("li"); // 以 DOM 创建新元素
 
             listMod.innerHTML =
-                "<li><div><img onerror=this.src='../static/showUndefined.png'></div><div><div>标题</div><span>作者</span><span class='skinTime'>日期</span></div></li>";
+                "<div><img> </div><div><span>作者</span><span class='skinTime'>创作时间</span></div>";
             $("#show_box_elite ul").prepend(listMod);
         }
 
         // 重载所有展示框
-        objArr = $("#show_box_elite ul a");
+        objArr = $("#show_box_elite ul li");
 
         // 填充展示框
         for (var i in data) {
 
-            let _object = new eliteObject(data[i].url, data[i].skinName, data[i].skinImg, data[i].skinCreate, data[i]
-                .skinTime);
-            $(objArr[i]).attr('target', "_blank");
-            $(objArr[i]).attr('href', _object.objUrl);
-            $(objArr[i]).attr('title', _object.objName);
-            $($(objArr[i]).children()[0].children[0].children[0]).attr('src', _object.objImg);
-            $($(objArr[i]).children()[0].children[1].children[0]).text(_object.objName);
-            $($(objArr[i]).children()[0].children[1].children[1]).text("作者：" + _object.objCreate);
-            $($(objArr[i]).children()[0].children[1].children[2]).text(_object.objTime);
+            let _object = new eliteObject(data[i].objUrl, data[i].objCreate, data[i].objTime);
+            $($(objArr[i]).children()[0].children[0].attr('src', _object.objUrl));
+            $($(objArr[i]).children()[1].children[0]).text(_object.objCreate);
+            $($(objArr[i]).children()[1].children[1]).text(_object.objTime);
         }
 
     }
 
+}
+
+
+// 初始化
+$("#picMask").fadeOut(0);
+// 点击查看大图
+$("#show_box_elite ul li div img").click(function () {
+    $("#bigPic div img").attr("src", this.src);
+    $("#picMask").fadeIn(300);
+})
+//点击按钮或遮罩关闭大图
+$("#picMask,#picMask .picDrag,#bigPic div .btnQuin").click(function () {
+    $("#picMask").fadeOut(300);
+    setTimeout(function () {
+        $("#picMask .picDrag").css({
+            "left": "0px",
+            "top": "0px"
+        });
+        $("#bigPic div img").css("zoom", "100%");
+    }, 300)
+})
+$("#bigPic,#bigPic div img,#bigPic div").click(function (e) {
+    e.stopPropagation();
+})
+
+// 滚轮缩放方法
+$(function () {
+    function zoomImg(o) {
+        var zoom = parseInt(o.style.zoom, 10) || 100;
+        zoom += event.wheelDelta / 5; //可适合修改
+        if (zoom > 0) o.style.zoom = zoom + '%';
+    }
+    $(document).ready(function () {
+        $("img").bind("mousewheel",
+            function () {
+                zoomImg(this);
+                return false;
+            });
+    });
+})
+
+
+// 鼠标拖拽方法
+$('#picMask .picDrag').mousedown(function (event) {
+    deltax = event.clientX - $(this).offset().left
+    deltay = event.clientY - $(this).offset().top
+    $(document).bind('mousemove', start)
+    $(document).bind('mouseup', end)
+    return false
+})
+
+function start(event) {
+    x = event.clientX - deltax
+    y = event.clientY - deltay
+    $('#picMask .picDrag').css({
+        'left': x + 'px',
+        'top': y + 'px'
+    })
+    return false
+}
+
+function end(event) {
+    $(this).unbind('mousemove')
+    $(this).unbind('mouseup')
 }
