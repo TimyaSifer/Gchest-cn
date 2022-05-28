@@ -54,11 +54,10 @@ function objFuc(jsonType) {
 
 }
 
-
 // 初始化
 $("#picMask").fadeOut(0);
 // 点击查看大图
-$("#show_box_elite ul li div img").click(function () {
+$("#show_box_elite ul li div img").on("click", function () {
     $("#bigPic div img").attr("src", this.src);
     $("#picMask").fadeIn(300);
 })
