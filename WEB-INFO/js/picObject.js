@@ -34,8 +34,7 @@ function objFuc(jsonType) {
 
             var listMod = document.createElement("li"); // 以 DOM 创建新元素
 
-            listMod.innerHTML =
-                "<div><img> </div><div><span>作者</span><span class='skinTime'>创作时间</span></div>";
+            listMod.innerHTML = "<div><img></div><div><span>作者</span><span class='skinTime'>创作时间</span></div>";
             $("#show_box_elite ul").prepend(listMod);
         }
 
@@ -45,8 +44,8 @@ function objFuc(jsonType) {
         // 填充展示框
         for (var i in data) {
 
-            let _object = new eliteObject(data[i].objUrl, data[i].objCreate, data[i].objTime);
-            $($(objArr[i]).children()[0].children[0].attr('src', _object.objUrl));
+            let _object = new eliteObject(data[i].url, data[i].Create, data[i].Time);
+            $($(objArr[i]).children()[0].children[0]).attr('src', _object.objUrl);
             $($(objArr[i]).children()[1].children[0]).text(_object.objCreate);
             $($(objArr[i]).children()[1].children[1]).text(_object.objTime);
         }
