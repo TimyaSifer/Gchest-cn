@@ -47,8 +47,7 @@ function objFuc(jsonType) {
         // 填充展示框
         for (var i in data) {
 
-            let _object = new eliteObject(data[i].url, data[i].skinName, data[i].skinImg, data[i].skinCreate, data[i]
-                .skinTime);
+            let _object = new eliteObject(data[i].url, data[i].Name, data[i].Img, data[i].Create, data[i].Time);
             $(objArr[i]).attr('target', "_blank");
             $(objArr[i]).attr('href', _object.objUrl);
             $(objArr[i]).attr('title', _object.objName);
