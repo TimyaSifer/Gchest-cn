@@ -20,6 +20,20 @@ body {
     background-color: #eeeeee;
 }
 
+/* 背景logo */
+.backLogo {
+    width: 800px;
+    height: 800px;
+    background-image: url(../../static/logoBg.png);
+    background-size: 100%;
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
 /* 大图展示 */
 #picMask {
     position: fixed;
@@ -61,6 +75,7 @@ body {
 #bigPic div img {
     object-fit: contain;
     -webkit-user-drag: none;
+    max-width: 1280px;
 }
 
 #bigPic div .btnQuin {
@@ -91,8 +106,8 @@ body {
 }
 
 #show_box_elite ul li {
-    width: 400px;
-    height: 250px;
+    width: 540px;
+    height: 330px;
     background-color: #eeeeee;
     border-left: 10px solid var(--skin);
     box-shadow: 0 0 5px rgb(0 0 0 / 40%);
@@ -103,7 +118,7 @@ body {
 
 #show_box_elite ul li div:first-child {
     width: 100%;
-    height: 85%;
+    height: 89%;
     position: relative;
     overflow: hidden;
     /* background-image: url(../../static/showUndefined.png);
@@ -120,7 +135,7 @@ body {
 
 #show_box_elite ul li div:last-child {
     width: 100%;
-    height: 15%;
+    height: 11%;
     background-size: 100%;
     background-position: center;
     background-color: white;
