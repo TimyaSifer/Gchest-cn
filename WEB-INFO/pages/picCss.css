@@ -97,6 +97,7 @@ body {
 /* 展示盒样式 */
 #show_box_elite {
     width: 100%;
+    position: relative;
 }
 
 /* 展示列表样式 */
