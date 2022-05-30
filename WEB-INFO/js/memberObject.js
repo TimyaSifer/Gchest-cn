@@ -46,8 +46,8 @@ function objFuc(jsonType) {
         for (var i in data) {
 
             let _object = new eliteObject(data[i].num, data[i].name, data[i].job, data[i].badge);
-            console.log(_object.objBadge);
-            if (_object.objBadge == "资格失效") {
+            console.log((_object.objBadge).toString());
+            if ((_object.objBadge).toString() == "资格失效") {
                 $(objArr[i]).attr('border-left', '10px solid var(--state_off)');
                 $($(objArr[i]).children()[1].children[1]).attr('color', 'var(--state_off)');
                 $($(objArr[i]).children()[1].children[1]).text('合约失效');
