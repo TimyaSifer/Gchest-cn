@@ -49,7 +49,6 @@ function objFuc(jsonType) {
             //console.log((_object.objBadge).toString());
             if ((_object.objBadge).toString() == "资格失效") {
                 console.log('1');
-                $($(objArr[i]).children()[0]).css('background-color', '#B8CCE4');
                 $($(objArr[i]).children()[1].children[2]).css('color', 'var(--state_off)');
                 $($(objArr[i]).children()[1].children[2]).text('合约失效');
             } else {
