@@ -35,7 +35,7 @@ function objFuc(jsonType) {
 
             var listMod = document.createElement("li"); // 以 DOM 创建新元素
 
-            listMod.innerHTML = "<li><div class='memberNum'><span></span><span></span></div><div class='memberName'><span></span><br><span class='state'></span></div></li>";
+            listMod.innerHTML = "<div class='memberNum'><span></span><span></span></div><div class='memberName'><span></span><br><span class='state'></span></div>";
             $("#list_member_box ul").prepend(listMod);
         }
 
