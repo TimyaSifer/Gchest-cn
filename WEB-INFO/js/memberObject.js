@@ -52,10 +52,13 @@ function objFuc(jsonType) {
                 $(objArr[i]).attr('border-left', '10px solid var(--state_off)');
                 $($(objArr[i]).children()[1].children[1]).attr('color', 'var(--state_off)');
                 $($(objArr[i]).children()[1].children[1]).text('合约失效');
+                return false;
             } else {
+                console.log('2');
                 $(objArr[i]).attr('border-left', '10px solid var(--state_on)');
                 $($(objArr[i]).children()[1].children[1]).attr('color', 'var(--state_on)');
                 $($(objArr[i]).children()[1].children[1]).text('合约生效中');
+                return false;
             }
             $($(objArr[i]).children()[0].children[0]).text(_object.objNum);
             $($(objArr[i]).children()[0].children[1]).text(_object.objJob);
