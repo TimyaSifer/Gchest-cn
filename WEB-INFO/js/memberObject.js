@@ -49,14 +49,34 @@ function objFuc(jsonType) {
             //console.log((_object.objBadge).toString());
             if ((_object.objBadge).toString() == "资格失效") {
                 console.log('1');
-                $(objArr[i]).css('border-left', '10px solid var(--state_off)');
                 $($(objArr[i]).children()[1].children[2]).css('color', 'var(--state_off)');
                 $($(objArr[i]).children()[1].children[2]).text('合约失效');
             } else {
                 console.log('2');
-                $(objArr[i]).css('border-left', '10px solid var(--state_on)');
                 $($(objArr[i]).children()[1].children[2]).css('color', 'var(--state_on)');
                 $($(objArr[i]).children()[1].children[2]).text('合约生效中');
+            }
+            switch (_object.objJob) {
+                case "美术组":
+                    $(objArr[i]).css('border-left', '10px solid var(--skin)');
+                    break;
+                case "模型组":
+                    $(objArr[i]).css('border-left', '10px solid var(--model)');
+                    break;
+                case "渲染组":
+                    $(objArr[i]).css('border-left', '10px solid var(--render)');
+                    break;
+                case "后期组":
+                    $(objArr[i]).css('border-left', '10px solid var(--later)');
+                    break;
+                case "文学组":
+                    $(objArr[i]).css('border-left', '10px solid var(--story)');
+                    break;
+                case "建筑组":
+                    $(objArr[i]).css('border-left', '10px solid var(--build)');
+                    break;
+                default:
+                    break;
             }
             $($(objArr[i]).children()[0].children[0]).text(_object.objNum);
             $($(objArr[i]).children()[0].children[1]).text(_object.objJob);
