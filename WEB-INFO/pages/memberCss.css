@@ -92,7 +92,7 @@ body {
     height:80px;
     float: left;
     margin: 10px;
-    border-left: 10px solid gray;
+    //border-left: 10px solid gray;
     box-shadow: 0 0 5px rgb(0 0 0 / 40%);
     background-color: #eeeeee;
 }
