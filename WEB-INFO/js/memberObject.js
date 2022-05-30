@@ -49,12 +49,12 @@ function objFuc(jsonType) {
             //console.log((_object.objBadge).toString());
             if ((_object.objBadge).toString() == "资格失效") {
                 console.log('1');
-                $(objArr[i]).attr('border-left', '10px solid var(--state_off)');
+                $(objArr[i]).css('border-left', '10px solid var(--state_off)');
                 $($(objArr[i]).children()[1].children[2]).attr('color', 'var(--state_off)');
                 $($(objArr[i]).children()[1].children[2]).text('合约失效');
             } else {
                 console.log('2');
-                $(objArr[i]).attr('border-left', '10px solid var(--state_on)');
+                $(objArr[i]).css('border-left', '10px solid var(--state_on)');
                 $($(objArr[i]).children()[1].children[2]).attr('color', 'var(--state_on)');
                 $($(objArr[i]).children()[1].children[2]).text('合约生效中');
             }
