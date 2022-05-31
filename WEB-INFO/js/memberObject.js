@@ -81,39 +81,39 @@ function objFuc(jsonType) {
             $($(objArr[i]).children()[0].children[1]).text(_object.objJob);
             $($(objArr[i]).children()[1].children[0]).text(_object.objName);
         }
+        
+        // 筛选功能
+        let arrIndex = "none";
+        let arrType = "none";
+        $("#siftBox ul").on("click", "li:not(.siftCheck)", function () {
+            $("#siftBox ul li").removeClass("siftCheck");
+            $(this).addClass("siftCheck");
+            $("#list_member_box ul li").fadeOut(100);
+            arrType = $(this).text();
+            setTimeout(function () {
+                switch (arrType) {
+                    case "ALL":
+                        $("#list_member_box ul li").fadeIn(100);
+                        break;
+                    case "合约失效":
+                        for (let i = 0; i < objArr.length; i++) {
+                            if ($(objArr[i].children[1].children[2]).text() == arrType) {
+                                $(objArr[i]).fadeIn(100);
+                            }
+
+                        }
+                        break;
+                    default:
+                        for (let i = 0; i < objArr.length; i++) {
+                            if ($(objArr[i].children[0].children[1]).text() == arrType) {
+                                $(objArr[i]).fadeIn(100);
+                            }
+                        }
+                        break;
+                }
+            }, 100)
+        })
 
     }
 
 }
-// 筛选功能
-menberArr = $("#list_member_box ul li");
-let arrIndex = "none";
-let arrType = "none";
-$("#siftBox ul").on("click", "li:not(.siftCheck)", function () {
-    $("#siftBox ul li").removeClass("siftCheck");
-    $(this).addClass("siftCheck");
-    $("#list_member_box ul li").fadeOut(100);
-    arrType = $(this).text();
-    setTimeout(function () {
-        switch (arrType) {
-            case "ALL":
-                $("#list_member_box ul li").fadeIn(100);
-                break;
-            case "合约失效":
-                for (let i = 0; i < menberArr.length; i++) {
-                    if ($(menberArr[i].children[1].children[2]).text() == arrType) {
-                        $(menberArr[i]).fadeIn(100);
-                    }
-
-                }
-                break;
-            default:
-                for (let i = 0; i < menberArr.length; i++) {
-                    if ($(menberArr[i].children[0].children[1]).text() == arrType) {
-                        $(menberArr[i]).fadeIn(100);
-                    }
-                }
-                break;
-        }
-    }, 100)
-})
