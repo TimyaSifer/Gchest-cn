@@ -1,4 +1,3 @@
-console.log("true");
 // 构造函数
 class listUrl {
     constructor(objName, objUrl) {
@@ -22,8 +21,16 @@ let option_6 = new listUrl("在职成员档案", "Member/member.html"); //首页
 // 选项
 var topList = $(".topPageOption ul li a");
 var nameType = "none";
+var urlType = "none";
 // 遍历填充
 for (let i = 0; i < Array.prototype.slice.call(topList).length; i++) {
-    $(topList[i]).attr("href", eval("option_" + i + ".objUrl"));
+    if (document.title == "黄金之匣 | 像素美术工作社") {
+        $(topList[i]).attr("href", eval("option_" + i + ".objUrl"));
+    } else {
+        // console.log(eval("../option_" + i + ".objUrl"));
+        urlType = eval("option_" + i + ".objUrl");
+        $(topList[i]).attr("href", "../" + urlType);
+    }
+
     $(topList[i]).text(eval("option_" + i + ".objName"));
 }
