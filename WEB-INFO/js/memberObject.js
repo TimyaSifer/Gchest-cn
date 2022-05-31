@@ -115,5 +115,4 @@ function objFuc(jsonType) {
         })
 
     }
-
 }
