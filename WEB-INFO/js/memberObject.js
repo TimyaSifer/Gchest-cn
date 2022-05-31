@@ -35,7 +35,7 @@ function objFuc(jsonType) {
 
             var listMod = document.createElement("li"); // 以 DOM 创建新元素
 
-            listMod.innerHTML = "<li><div class='memberNum'><span></span><span></span></div><div class='memberName'><span></span><br><span class='state'></span></div></li>";
+            listMod.innerHTML = "<div class='memberNum'><span></span><span></span></div><div class='memberName'><span></span><br/><span class='state'></span></div>";
             $("#list_member_box ul").prepend(listMod);
         }
 
@@ -46,14 +46,36 @@ function objFuc(jsonType) {
         for (var i in data) {
 
             let _object = new eliteObject(data[i].num, data[i].name, data[i].job, data[i].badge);
-            if (data[i].badge == "资格失效") {
-                $(objArr[i]).attr('border-left', '10px solid var(--state_off)');
-                $($(objArr[i]).children()[1].children[1]).attr('color', 'var(--state_off)');
-                $($(objArr[i]).children()[1].children[1]).text('合约失效');
+            //console.log((_object.objBadge).toString());
+            if ((_object.objBadge).toString() == "资格失效") {
+                $(objArr[i]).css('border-left', '10px solid gray)');
+                $($(objArr[i]).children()[1].children[2]).css('color', 'var(--state_off)');
+                $($(objArr[i]).children()[1].children[2]).text('合约失效');
             } else {
-                $(objArr[i]).attr('border-left', '10px solid var(--state_on)');
-                $($(objArr[i]).children()[1].children[1]).attr('color', 'var(--state_on)');
-                $($(objArr[i]).children()[1].children[1]).text('合约生效中');
+                $($(objArr[i]).children()[1].children[2]).css('color', 'var(--state_on)');
+                $($(objArr[i]).children()[1].children[2]).text('合约生效中');
+            }
+            switch (_object.objJob) {
+                case "美术组":
+                    $(objArr[i]).css('border-left', '10px solid var(--skin)');
+                    break;
+                case "模型组":
+                    $(objArr[i]).css('border-left', '10px solid var(--model)');
+                    break;
+                case "渲染组":
+                    $(objArr[i]).css('border-left', '10px solid var(--render)');
+                    break;
+                case "后期组":
+                    $(objArr[i]).css('border-left', '10px solid var(--later)');
+                    break;
+                case "文学组":
+                    $(objArr[i]).css('border-left', '10px solid var(--story)');
+                    break;
+                case "建筑组":
+                    $(objArr[i]).css('border-left', '10px solid var(--build)');
+                    break;
+                default:
+                    break;
             }
             $($(objArr[i]).children()[0].children[0]).text(_object.objNum);
             $($(objArr[i]).children()[0].children[1]).text(_object.objJob);
@@ -63,3 +85,35 @@ function objFuc(jsonType) {
     }
 
 }
+// 筛选功能
+menberArr = $("#list_member_box ul li");
+let arrIndex = "none";
+let arrType = "none";
+$("#siftBox ul").on("click", "li:not(.siftCheck)", function () {
+    $("#siftBox ul li").removeClass("siftCheck");
+    $(this).addClass("siftCheck");
+    $("#list_member_box ul li").fadeOut(100);
+    arrType = $(this).text();
+    setTimeout(function () {
+        switch (arrType) {
+            case "ALL":
+                $("#list_member_box ul li").fadeIn(100);
+                break;
+            case "合约失效":
+                for (let i = 0; i < menberArr.length; i++) {
+                    if ($(menberArr[i].children[1].children[2]).text() == arrType) {
+                        $(menberArr[i]).fadeIn(100);
+                    }
+
+                }
+                break;
+            default:
+                for (let i = 0; i < menberArr.length; i++) {
+                    if ($(menberArr[i].children[0].children[1]).text() == arrType) {
+                        $(menberArr[i]).fadeIn(100);
+                    }
+                }
+                break;
+        }
+    }, 100)
+})
