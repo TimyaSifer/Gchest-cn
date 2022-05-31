@@ -12,9 +12,9 @@ body {
     --later: #9C6500;
     --story: #006100;
     --build: #974706;
-    
-    --state_on:#0076d4;
-    --state_off:red;
+
+    --state_on: #0076d4;
+    --state_off: red;
 }
 
 /* 标题样式 */
@@ -73,7 +73,7 @@ body {
 }
 
 /* 列表项 */
-#list_member_box{
+#list_member_box {
     width: calc(100% - 200px);
     height: 75vh;
     /* background-color: #86499B; */
@@ -87,32 +87,41 @@ body {
     overflow-y: auto;
 }
 
-#list_member_box ul li{
-    width: calc(25% - 20px);
-    height:80px;
+#list_member_box ul {
+    width: auto;
+    height: auto;
+}
+
+#list_member_box ul li {
+    width: calc(20% - 20px);
+    height: 80px;
     float: left;
     margin: 10px;
     border-left: 10px solid gray;
     box-shadow: 0 0 5px rgb(0 0 0 / 40%);
     background-color: #eeeeee;
 }
-#list_member_box ul li .memberNum{
+
+#list_member_box ul li .memberNum {
     width: 100%;
-    height: 40%; 
+    height: 40%;
     /* border-bottom: 1px solid gray; */
     padding: 0px 10px;
     line-height: 170%;
     font-weight: 600;
     background-color: #dbdbdb;
 }
-#list_member_box ul li .memberNum span:last-child{
+
+#list_member_box ul li .memberNum span:last-child {
     float: right;
 }
-#list_member_box ul li .memberName{
+
+#list_member_box ul li .memberName {
     width: 100%;
-    height: 60%; 
+    height: 60%;
     padding-left: 10px;
 }
-#list_member_box ul li .memberName .state{
+
+#list_member_box ul li .memberName .state {
     font-size: 12px;
 }
