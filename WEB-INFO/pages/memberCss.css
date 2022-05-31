@@ -125,3 +125,24 @@ body {
 #list_member_box ul li .memberName .state {
     font-size: 12px;
 }
+@media only screen and (max-width: 1600px) {
+    #list_member_box ul li {
+        width: calc(25% - 20px); 
+    }
+  }
+@media only screen and (max-width: 1200px) {
+    #list_member_box ul li {
+        width: calc(30% - 20px); 
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    #list_member_box ul li {
+        width: calc(50% - 20px); 
+    }
+  }
+@media only screen and (max-width: 800px) {
+    #list_member_box ul li {
+        width: calc(100% - 20px); 
+    }
+  }
+  
