@@ -16,7 +16,11 @@ let option_4 = new listUrl("优秀文字作品", "Elite/storyElite.html"); //文
 let option_5 = new listUrl("体素渲染作品", "Elite/picElite.html"); //渲染
 
 // 社团成员
-let option_6 = new listUrl("在职成员档案", "Member/member.html"); //首页
+let option_6 = new listUrl("历届成员档案", "Member/member.html"); //历届成员
+let option_7 = new listUrl("管理组档案", "Member/admin.html"); //管理组档案
+
+// 成员功能
+let option_8 = new listUrl("人事档案提交", "MemberFuc/submission.html"); //人事档案提交
 
 // 选项
 var topList = $(".topPageOption ul li a");

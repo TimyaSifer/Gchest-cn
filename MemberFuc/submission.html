@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>档案室</title>
-    
+    <title>人事档案提交</title>
+
     <link rel="shortcut icon" href="../static/pageIco.ico">
 
     <script type="text/javascript" src="../WEB-INFO/js/jquery-3.5.1.js"></script>
     <script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="../WEB-INFO/pages/HomeFormCss.css">
-    <link rel="stylesheet" href="../WEB-INFO/pages/memberCss.css">
+    <link rel="stylesheet" href="../WEB-INFO/pages/submissionCss.css">
 
     <script type="text/javascript" src="../WEB-INFO/js/homeFormJsCode.js"></script>
 </head>
@@ -72,55 +72,11 @@
         </ul>
     </div>
 
-    <!-- 背景logo -->
-    <div class="backLogo"></div>
-
-    <!-- 标题 -->
-    <div id="show_title">
-        历届成员档案
-    </div>
-
-    <!-- 筛选 -->
-    <div id="siftBox">
-        <ul>
-            <li class="siftCheck">ALL</li>
-            <li>美术组</li>
-            <li>模型组</li>
-            <li>渲染组</li>
-            <li>后期组</li>
-            <li>文学组</li>
-            <li>建筑组</li>
-            <li>合约失效</li>
-        </ul>
-    </div>
-
-    <!-- 列表项 -->
-    <div id="list_member_box">
-        <ul>
-            <!-- <li style="border-left: 10px solid var(--state_on);">
-                <div class="memberNum">
-                    <span>BO220000000T</span>
-                    <span>后期组</span>
-                </div>
-                <div class="memberName">
-                    <span>测试假人</span><br>
-                    <span class="state" style="color: var(--state_on);">合约生效中</span>
-                </div>
-            </li> -->
-        </ul>
-    </div>
-
+    <!-- 内容栏 -->
+    <div id="show_box"></div>
 
 </body>
 <!-- 顶部选项卡初始化 -->
 <script type="text/javascript" src="../WEB-INFO/js/topOption.js"></script>
-<!-- json自动填充list方法 -->
-<script type="text/javascript" src="../WEB-INFO/js/memberObject.js"></script>
-<script>
-    //定义json路径变量
-    var jsonType = "../static/listMember.json";
-    objFuc(jsonType);
-    
-</script>
 
 </html>

@@ -15,6 +15,8 @@ body {
 
     --state_on: #0076d4;
     --state_off: red;
+
+    --admin: Purple;
 }
 
 /* 标题样式 */
@@ -125,23 +127,104 @@ body {
 #list_member_box ul li .memberName .state {
     font-size: 12px;
 }
+
 @media only screen and (max-width: 1600px) {
     #list_member_box ul li {
-        width: calc(25% - 20px); 
+        width: calc(25% - 20px);
     }
-  }
+}
+
 @media only screen and (max-width: 1200px) {
     #list_member_box ul li {
-        width: calc(30% - 20px); 
+        width: calc(30% - 20px);
     }
-  }
-  @media only screen and (max-width: 1000px) {
+}
+
+@media only screen and (max-width: 1000px) {
     #list_member_box ul li {
-        width: calc(50% - 20px); 
+        width: calc(50% - 20px);
     }
-  }
+}
+
 @media only screen and (max-width: 800px) {
     #list_member_box ul li {
-        width: calc(100% - 20px); 
+        width: calc(100% - 20px);
     }
-  }
+}
+
+
+/* 管理组档案 列表项 */
+#list_admin_box {
+    width: calc(100% - 200px);
+    height: 75vh;
+    /* background-color: #86499B; */
+    background-color: transparent;
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+#list_admin_box ul {
+    width: auto;
+    height: auto;
+}
+
+#list_admin_box ul li {
+    width: calc(50% - 20px);
+    height: 200px;
+    float: left;
+    margin: 10px;
+    border-left: 10px solid gray;
+    box-shadow: 0 0 5px rgb(0 0 0 / 40%);
+    background-color: #eeeeee;
+}
+
+#list_admin_box ul li .memberNum {
+    width: 100%;
+    height: 15%;
+    /* border-bottom: 1px solid gray; */
+    padding: 0px 10px;
+    line-height: 170%;
+    font-weight: 600;
+    background-color: #dbdbdb;
+}
+
+#list_admin_box ul li .memberNum span:last-child {
+    float: right;
+}
+
+#list_admin_box ul li .memberName {
+    width: 100%;
+    height: 85%;
+    padding-left: 10px;
+}
+
+#list_admin_box ul li .memberName .adminHead {
+    width: 150px;
+    height: 150px;
+    margin: 8px 5px;
+    float: left;
+    background-size: 100%;
+    background-position: center;
+    border: 1px solid gray;
+}
+
+#list_admin_box ul li .memberName .adminInf {
+    width: calc(100% - 200px);
+    height: 150px;
+    margin: 5px 10px;
+    float: left;
+    padding: 5px 0px;
+}
+#list_admin_box ul li .memberName .adminInf ul li{
+    width: auto;
+    height: auto;
+    clear: both;
+    margin-bottom: 0px;
+    border:none;
+    box-shadow: none;
+}

@@ -1,0 +1,13 @@
+/* 全局设置 */
+body {
+    background-color: #eeeeee;
+}
+
+#show_box {
+    width: 100vw;
+    height: calc(100vh - 50px);
+    background-image: url(../../static/Submission.jpg);
+    background-size: 80%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
