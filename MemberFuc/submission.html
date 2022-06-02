@@ -24,7 +24,7 @@
         <!-- logo -->
         <a href="../index.html">
             <div class="topLogo"></div>
-            <span class="topTitle">黄金之匣 美术工作社</span>
+            <span class="topTitle">歌德祇斯 猫神之教团</span>
         </a>
 
         <ul class="topOptions" style="z-index: 10;">
@@ -72,11 +72,265 @@
         </ul>
     </div>
 
+    <!-- 标题 -->
+    <div id="show_title">
+        新调查员 合约登记页[离线状态]
+    </div>
     <!-- 内容栏 -->
-    <div id="show_box"></div>
+    <div id="show_box">
+        <!-- 左侧内容 -->
+        <div class="infBox">
+            <div class="spanTitle">
+                ★基本信息
+            </div>
+
+            <div class="userInfor">
+                <ul>
+                    <li>
+                        <div class="textName"><span class="textStar">*</span>用于称呼的昵称：</div>
+                        <input type="text" class="textLong userName" MaxLength="8">
+                        <span class="maxLenght">墨水仅足够再填写</span>
+                        <span class="maxLenght maxNameLenght">8</span>
+                        <span class="maxLenght">字</span>
+                    </li>
+                    <li>
+                        <div class="textName"><span class="textStar">*</span>MCBBS论坛 用户名：</div>
+                        <input type="text" class="textLong" MaxLength="15">
+                    </li>
+                    <li>
+                        <div class="textName"><span class="textStar">*</span>MCBBS论坛 UID：</div>
+                        <input type="text" class="textLong" MaxLength="10">
+                    </li>
+                    <li>
+                        <div class="textName"><span class="textStar">*</span>联系方式（QQ）：</div>
+                        <input type="text" class="textLong" MaxLength="15">
+                    </li>
+                    <li>
+                        <div class="textName">&nbsp;常用邮箱：</div>
+                        <input type="text" class="textLong" MaxLength="30">
+                    </li>
+                    <li>
+                        <div class="textName"><span class="textStar">*</span>性别与印记：</div>
+                        <div class="userSexOption">
+                            <ul>
+                                <li class="userSexCheck">男性调查员</li>
+                                <li>女性调查员</li>
+                                <li>LGBT调查员</li>
+                                <li>未知调查员</li>
+                                <li>古神的信徒</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="textName">个人兴趣爱好：</div>
+                        <div class="Interest">
+                            <input type="text" class="userInterest" MaxLength="5">
+                            <input type="text" class="userInterest" MaxLength="5">
+                            <input type="text" class="userInterest" MaxLength="5">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="textName">&nbsp;惯用工具：</div>
+                        <input type="text" class="textLong" MaxLength="8">
+                    </li>
+                    <li class="loginDate">
+                        <div class="textName">&nbsp;调查员合约起始日期：</div>
+                        <span>0000</span>
+                        <span>年</span>
+                        <span>00</span>
+                        <span>月</span>
+                        <span>00</span>
+                        <span>日</span>
+                    </li>
+                    <li class="userIntroduceBox" MaxLength="80" Height="100px" TextMode="MultiLine">
+                        <div class="textName"><span class="textStar">*</span>个人介绍：</div>
+                        <textarea class="textLong userIntroduction" MaxLength="80" TextMode="MultiLine"
+                            style="height: 100px;"></textarea>
+                        <span class="maxLenght">血液仅足够再填写</span>
+                        <span class="maxLenght maxIntroductionLenght">60</span>
+                        <span class="maxLenght">字</span>
+                    </li>
+                    <li class="userIntroduceBox">
+                        <div class="textName">&nbsp;备注：</div>
+                        <textarea class="textLong userNotes" MaxLength="100" TextMode="MultiLine"
+                            style="height: 100px;"></textarea>
+                        <span class="maxLenght">未知的黏液足够填写</span>
+                        <span class="maxLenght userNotesLenght">100</span>
+                        <span class="maxLenght">字</span>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <!-- 右侧内容 -->
+        <div class="infBox">
+            <div class="userInforBox userRoleCard">
+                <div class="spanTitle">
+                    ★角色卡
+                </div>
+                <div class="userHead" title="上传头像">
+                    <div class="askIcon">
+                        <div class="askBox">
+                            <p>您还需要一份虚拟的肖像作为调查员的证明，</p>
+                            <p>请访问<a href="https://picrew.me/image_maker/73327 " target="_blank">https://picrew.me/image_maker/73327
+                                </a></p>
+                            <p>创作自由，唯一的要求为您的背景必须要有三道横条</p>
+                            <p>若无法访问该地址，请直接联系<span>司书 暗夜Elen</span>或<span>司书 缇米莉亚</span></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="userRoleText">
+                    <ul>
+                        <li>
+                            <span>调查员名称：</span>
+                            <span class="userNameText"></span>
+                        </li>
+                        <li>
+                            <span>印记：</span>
+                            <span class="userSexText">男性调查员</span>
+                        </li>
+                        <li>
+                            <span>调查员编号：</span>
+                            <span class="userCodeText"></span>
+                        </li>
+                        <li>
+                            <span>偏执：</span>
+                            <span class="userDepartmentText"></span>
+                        </li>
+                        <li>
+                            <span>密钥：</span>
+                            <input type="text" class="userInforText loginKey" MaxLength="15" TextMode="Password">
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="userInforBox userSkills">
+                <div class="spanTitle">
+                    ★调查员点数
+                </div>
+                <div class="userInfor userLevel">
+                    <ul>
+                        <li class="points">
+                            <div>剩余点数：</div>
+                            <div class="inforSkillsTitleText" style="float: left">0000</div>
+                            <div class="skillsReload" title="重置点数"></div>
+                        </li>
+                        <li style="clear: both">
+                            <ul>
+                                <li>
+                                    <span>皮肤</span>
+                                    <div class="skillsPoint">
+                                        <div class="pointAdd">+</div>
+                                        <span class="pointSkin">0</span>
+                                        <div class="pointDel">-</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>建模</span>
+                                    <div class="skillsPoint">
+                                        <div class="pointAdd">+</div>
+                                        <span class="pointModeling">0</span>
+                                        <div class="pointDel">-</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>渲染</span>
+                                    <div class="skillsPoint">
+                                        <div class="pointAdd">+</div>
+                                        <span class="pointRender">0</span>
+                                        <div class="pointDel">-</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>后期</span>
+                                    <div class="skillsPoint">
+                                        <div class="pointAdd">+</div>
+                                        <span class="pointAnaphase">0</span>
+                                        <div class="pointDel">-</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>绘画</span>
+                                    <div class="skillsPoint">
+                                        <div class="pointAdd">+</div>
+                                        <span class="pointDraw">0</span>
+                                        <div class="pointDel">-</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>建筑</span>
+                                    <div class="skillsPoint">
+                                        <div class="pointAdd">+</div>
+                                        <span class="pointBuild">0</span>
+                                        <div class="pointDel">-</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>文学</span>
+                                    <div class="skillsPoint">
+                                        <div class="pointAdd">+</div>
+                                        <span class="pointLiterature">0</span>
+                                        <div class="pointDel">-</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>摸鱼</span>
+                                    <div class="skillsPoint">
+                                        <div class="pointAdd">+</div>
+                                        <span class="pointFishing">0</span>
+                                        <div class="pointDel">-</div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li style="clear:both;">
+                            <div class="inforSkillsTitle">调查偏执：</div>
+                            <div class="userDepartment">
+                                <ul>
+                                    <li class="skillsDisables">美术组</li>
+                                    <li class="skillsDisables">模型组</li>
+                                    <li class="skillsDisables">渲染组</li>
+                                    <li class="skillsDisables">后期组</li>
+                                    <li class="skillsDisables">文学组</li>
+                                    <li class="skillsDisables">建筑组</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="userInforBox userAbility">
+                <div class="spanTitle">
+                    ★额外负担
+                </div>
+                <div class="userAbilityList">
+                    <ul>
+                        <li class="userAbilityLi">blockbench模型</li>
+                        <li class="userAbilityLi">Blender</li>
+                        <li class="userAbilityLi">建筑渲染</li>
+                        <li class="userAbilityLi">像素画</li>
+                        <li class="userAbilityLi">材质包</li>
+                        <li class="userAbilityLi">文学译制</li>
+                        <li class="userAbilityAdd">自定义 +</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 </body>
 <!-- 顶部选项卡初始化 -->
 <script type="text/javascript" src="../WEB-INFO/js/topOption.js"></script>
+<!-- 界面动态 -->
+<script type="text/javascript" src="../WEB-INFO/js/submission.js"></script>
+<!-- 加密方法 -->
+<script type="text/javascript"></script>
 
 </html>
