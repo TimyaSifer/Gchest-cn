@@ -14,7 +14,7 @@ a {
 }
 /* 复杂颜色定义 */
 *{
-    --list_Check_Color:linear-gradient(to right, #7d482a, #f5b58d);
+    --list_Check_Color:linear-gradient(to right, #7d482a, #f5b58d); 
 }
 /* 加载显示logo */
 #maxImgBg{
