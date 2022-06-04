@@ -1,4 +1,27 @@
-    //界面功能
+// 变量
+// 构造函数
+class pointObj {
+    constructor(pointName, pointNum, pointText) {
+        this.pointName = pointName;
+        this.pointNum = pointNum;
+        this.pointText = pointText;
+    }
+}
+var point0 = new pointObj("pointSkin", 0, "皮肤"); //皮肤
+var point1 = new pointObj("pointModeling", 0, "模型"); //模型
+var point2 = new pointObj("pointRender", 0, "渲染"); //渲染
+var point3 = new pointObj("pointAnaphase", 0, "后期"); //后期
+var point4 = new pointObj("pointDraw", 0, "绘画"); //绘画
+var point5 = new pointObj("pointBuild", 0, "建筑"); //建筑
+var point6 = new pointObj("pointLiterature", 0, "文学"); //文学
+var point7 = new pointObj("pointFishing", 0, "摸鱼"); //摸鱼
+
+var pointList = new Array(point0, point1, point2, point3, point4, point5, point6, point7);
+
+// 负担
+var AbilityNum = 0;
+
+//界面功能
 //页面加载后初始化
 var skillsType = 25;
 window.onload = function () {
@@ -58,11 +81,17 @@ $(".userNotes").keyup(function () {
 
 //调查员点数功能
 //增加等级
-$("ul li .skillsPoint").on("click", ".pointAdd", function () {
+$("ul li .skillsPoint").on("click", ".pointAdd", function (event) {
     var type = $(this).parent().children()[1];
+
     if (type.innerText >= 0 && $(".inforSkillsTitleText").text() <= skillsType && $(
             ".inforSkillsTitleText").text() > 0) {
         type.innerText = type.innerText * 1 + 1;
+        for (let i = 0; i < pointList.length; i++) {
+            if (pointList[i].pointName == $($(this).parent().children()[1]).attr("class")) {
+                pointList[i].pointNum++;
+            }
+        }
         $(".inforSkillsTitleText").text($(".inforSkillsTitleText").text() * 1 - 1);
         userLevelFuc();
     } else {
@@ -76,6 +105,11 @@ $("ul li .skillsPoint").on("click", ".pointDel", function () {
     if (type.innerText > 0 && $(".inforSkillsTitleText").text() <= skillsType && $(
             ".inforSkillsTitleText").text() >= 0) {
         type.innerText = type.innerText * 1 - 1;
+        for (let i = 0; i < pointList.length; i++) {
+            if (pointList[i].pointName == $($(this).parent().children()[1]).attr("class")) {
+                pointList[i].pointNum--;
+            }
+        }
         $(".inforSkillsTitleText").text($(".inforSkillsTitleText").text() * 1 + 1);
         userLevelFuc();
     } else {
@@ -91,34 +125,37 @@ $(".skillsReload").click(function () {
     $(".userDepartmentText").text("");
     $(".userDepartment ul li").attr("class", "skillsDisables");
     Card1 = "--";
+    for (let i = 0; i < pointList.length; i++) {
+        pointList[i].pointNum = 0;
+    }
     userCardReload();
 })
 
 //偏执开关
 function userLevelFuc() {
     //美术组
-    if ($(".pointSkin").text() > 4 || $(".pointAnaphase").text() > 4 || $(".pointDraw").text() > 4) {
+    if (point0.pointNum > 4 || point3.pointNum > 4 || point4.pointNum > 4) {
 
         $($(".userDepartment ul li")[0]).removeClass();
     } else {
         $($(".userDepartment ul li")[0]).attr("class", "skillsDisables");
     }
     //模型组
-    if ($(".pointModeling").text() > 4) {
+    if (point1.pointNum > 4) {
 
         $($(".userDepartment ul li")[1]).removeClass();
     } else {
         $($(".userDepartment ul li")[1]).attr("class", "skillsDisables");
     }
     //渲染组
-    if ($(".pointRender").text() > 4) {
+    if (point2.pointNum > 4) {
 
         $($(".userDepartment ul li")[2]).removeClass();
     } else {
         $($(".userDepartment ul li")[2]).attr("class", "skillsDisables");
     }
     //后期组
-    if ($(".pointRender").text() > 4 || $(".pointAnaphase").text() > 4 || $(".pointDraw").text() > 4 || $(
+    if (point2.pointNum > 4 || point3.pointNum > 4 > 4 || point4.pointNum > 4 > 4 || $(
             ".pointLiterature").text() > 4) {
 
         $($(".userDepartment ul li")[3]).removeClass();
@@ -126,14 +163,14 @@ function userLevelFuc() {
         $($(".userDepartment ul li")[3]).attr("class", "skillsDisables");
     }
     //文学组
-    if ($(".pointLiterature").text() > 4) {
+    if (point6.pointNum > 4) {
 
         $($(".userDepartment ul li")[4]).removeClass();
     } else {
         $($(".userDepartment ul li")[4]).attr("class", "skillsDisables");
     }
     //建筑组
-    if ($(".pointBuild").text() > 4) {
+    if (point5.pointNum > 4) {
 
         $($(".userDepartment ul li")[5]).removeClass();
     } else {
@@ -186,9 +223,9 @@ $(".userAbility .userAbilityList ul").on("click", ".userAbilityLi", function () 
 //自定义负担
 $(".userAbilityAdd").click(function () {
     $(".userAbilityAdd").before('<li class="AbilityAddText"><input type="text" maxlength="7"/></li>');
-    $(".AbilityAddText input").focus();   
+    $(".AbilityAddText input").focus();
     var addLen = document.querySelectorAll(".userAbilityList ul .userAbilityAddLi");
-    if (addLen.length >= 3) {
+    if (AbilityNum >= 3) {
         $(".userAbilityAdd").fadeOut(0);
         return;
     }
@@ -198,7 +235,7 @@ $(".userAbilityAdd").click(function () {
 //失去焦点
 $(".userAbility").on("blur", ".AbilityAddText input", function () {
     var type = $(".AbilityAddText input").val();
-    if (String(type).length == 0) {
+    if (String(type).length == 0 || AbilityNum >= 4) {
         $(".AbilityAddText").remove();
         return 0;
     } else {
@@ -206,6 +243,7 @@ $(".userAbility").on("blur", ".AbilityAddText input", function () {
         $(".userAbilityAdd").before('<li class="userAbilityAddLi">' + type + '</li>');
         $("userAbilityAddLi").attr("class", "userAbilityAddLi");
         $(".AbilityAddText").remove();
+        AbilityNum++;
     }
 })
 //回车确认
@@ -219,7 +257,8 @@ $(".userAbility").keydown(function (e) {
 $(".userAbility").on("click", ".userAbilityAddLi", function () {
     $(this).remove();
     var addLen = document.querySelectorAll(".userAbilityList ul .userAbilityAddLi");
-    if (addLen.length <= 3) {
+    AbilityNum--;
+    if (AbilityNum <= 3) {
         $(".userAbilityAdd").fadeIn(0);
     }
 })

@@ -1,4 +1,7 @@
 /* 全局设置 */
+*{
+    outline: none;
+}
 body {
     background-color: #eeeeee;
 }
@@ -56,7 +59,6 @@ input {
 #show_box .infBox:first-child {
     float: left;
     width: calc(50% - 10px);
-    min-height: 100%;
     box-shadow: 0 0 5px rgb(0 0 0 / 40%);
     margin-right: 20px;
     border-left: 10px solid var(--border);
@@ -97,17 +99,23 @@ input {
     width: var(--textLongLen);
     height: 30px;
     float: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
 #show_box .infBox:first-child .userInfor ul li .Interest input {
-    width: 32.4%;
+    width: calc(100%/3);
     border: 2px solid var(--border);
     text-align: center;
     font-size: 15px;
+    margin-left: 10px;
 }
 
 #show_box .infBox:first-child .userInfor ul li .Interest input:first-child {
     border-left: 5px solid var(--border);
+    margin-left: 0px;
 }
 
 #show_box .infBox:first-child .userInfor ul li .userSexOption {
@@ -276,10 +284,12 @@ input {
     width: 90px;
     font-size: 1.1em;
 }
-.userInforBox .userInfor ul .points .inforSkillsTitleText{
+
+.userInforBox .userInfor ul .points .inforSkillsTitleText {
     width: 30px;
     text-align: center;
 }
+
 .userInforBox .userInfor ul .points span,
 .userInforBox .userInfor ul li .inforSkillsTitle {
     font-size: 1.1em;
@@ -354,11 +364,12 @@ input {
 }
 
 /* 偏执 */
-.userSkills div ul li .inforSkillsTitle{
+.userSkills div ul li .inforSkillsTitle {
     float: left;
     position: relative;
     top: 20px;
 }
+
 .userSkills div ul li .userDepartment {
     clear: both;
     width: calc(100% - 40px);
@@ -369,6 +380,7 @@ input {
     font-weight: bold;
     position: relative;
     top: 30px;
+    overflow: hidden;
 }
 
 .userSkills div ul li .userDepartment ul {
@@ -388,16 +400,19 @@ input {
     color: var(--border);
     cursor: pointer;
 }
-.userSkills div ul li .userDepartment ul .skillsDisables{
-    cursor:no-drop ;
+
+.userSkills div ul li .userDepartment ul .skillsDisables {
+    cursor: no-drop;
     background-color: #eeeeee;
     color: gray;
 }
-.userSkills div ul li .userDepartment ul .departmentReady:hover{
+
+.userSkills div ul li .userDepartment ul .departmentReady:hover {
     background-color: #7a64a5;
     color: white;
 }
-.userSkills div ul li .userDepartment ul .departmentCheck{
+
+.userSkills div ul li .userDepartment ul .departmentCheck {
     text-align: right;
     padding-right: 30px;
     line-height: 70%;
@@ -409,6 +424,7 @@ input {
     background-color: var(--border);
     color: white;
 }
+
 .userSkills div ul li .userDepartment ul li:not(:first-child) {
     border-left: 1px solid var(--border);
 }
@@ -419,9 +435,11 @@ input {
     height: auto;
     color: var(--border);
 }
-.userAbility ul{
-    margin:20px 40px;
+
+.userAbility ul {
+    margin: 20px 40px;
 }
+
 .userAbility ul li {
     width: 140px;
     height: 35px;
@@ -435,6 +453,7 @@ input {
     border-radius: 20px;
     cursor: pointer;
 }
+
 .userAbilityList ul .userAbilityCheck {
     background-image: linear-gradient(45deg, #fcb592, #fdcb67);
 }
@@ -462,6 +481,50 @@ input {
 
 
 /* 分辨率适配 */
+@media (-webkit-min-device-pixel-ratio: 0.75) {
+    body {
+        zoom: 1.3;
+    }
+
+    #show_box .infBox:first-child,
+    #show_box .infBox:last-child {
+        height: 60vh !important;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1) {
+    body {
+        zoom: 1;
+    }
+
+    #show_box .infBox:first-child,
+    #show_box .infBox:last-child {
+        height: 80vh !important;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.25) {
+    body {
+        zoom: 0.8;
+    }
+
+    #show_box .infBox:first-child,
+    #show_box .infBox:last-child {
+        height: 100vh !important;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) {
+    body {
+        zoom: 0.8;
+    }
+
+    #show_box .infBox:first-child,
+    #show_box .infBox:last-child {
+        height: 130vh !important;
+    }
+}
+
 @media only screen and (max-width: 1600px) {
     #show_box .infBox:first-child .userInfor ul li .textName {
         font-size: 14px;
@@ -478,10 +541,6 @@ input {
     #show_box .infBox:first-child,
     #show_box .infBox:last-child {
         height: 130vh;
-    }
-
-    #show_box .infBox:first-child .userInfor ul li .Interest input {
-        width: 32.1%;
     }
 }
 
