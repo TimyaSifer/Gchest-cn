@@ -1,5 +1,5 @@
 /* 全局样式 */
-*{
+* {
     margin: 0px;
     padding: 0px;
     border: 0px;
@@ -7,17 +7,20 @@
     user-select: none;
     list-style: none;
 }
+
 a {
-	text-decoration: none;
-	outline: none;
-	color: #000;
+    text-decoration: none;
+    outline: none;
+    color: #000;
 }
+
 /* 复杂颜色定义 */
-*{
-    --list_Check_Color:linear-gradient(to right, #7d482a, #f5b58d); 
+* {
+    --list_Check_Color: linear-gradient(to right, #7d482a, #f5b58d);
 }
+
 /* 加载显示logo */
-#maxImgBg{
+#maxImgBg {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -25,20 +28,24 @@ a {
     /* background-image: linear-gradient(to bottom, #a0a0a0, #e3e3e3); */
     z-index: 10;
 }
-#maxImgBg .topImgBox{
+
+#maxImgBg .topImgBox {
     width: 60%;
     margin: 300px auto;
 }
-#maxImgBg img{
+
+#maxImgBg img {
     width: 100%;
 }
+
 /* 顶部栏样式 */
-#topPage{
+#topPage {
     width: 100%;
     height: 50px;
     background-color: white;
 }
-#topPage .topLogo{
+
+#topPage .topLogo {
     width: 45px;
     height: 45px;
     background-image: url(../../static/logo2.png);
@@ -48,21 +55,24 @@ a {
     left: 10px;
     float: left;
 }
-#topPage .topTitle{
+
+#topPage .topTitle {
     font-size: 1.1em;
     font-weight: 200;
     position: relative;
     top: 14px;
     left: 13px;
 }
-#topPage .topOptions{
+
+#topPage .topOptions {
     height: 2em;
     float: right;
     position: relative;
     top: 0.9em;
     right: 0px;
 }
-#topPage .topOptions li{
+
+#topPage .topOptions li {
     float: left;
     width: 8em;
     height: 37px;
@@ -71,17 +81,33 @@ a {
     font-weight: 200;
     text-align: center;
     cursor: pointer;
-    background-image:var(--list_Check_Color) ;
+    background-image: var(--list_Check_Color);
     -webkit-background-clip: text;
 }
 
-#topPage .topOptions li:hover{
+#topPage .topOptions li:hover {
     color: rgb(0 0 0 / 0%);
-    transition: color 0.3s; 
+    transition: color 0.3s;
 }
+
+/* 隐藏按钮 */
+.optionMore {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    margin-right: 20px;
+    background-image: url(../../static/minMore.png);
+    background-size: 100%;
+    background-position: center;
+    float: right;
+    cursor: pointer;
+    display: none;
+    z-index: 20 !important;
+}
+
 /* 顶部栏下拉框 */
-#topPage .topPageOption{
-    width:100%;
+#topPage .topPageOption {
+    width: 100%;
     height: 0px;
     padding-left: 1em;
     background-color: white;
@@ -89,42 +115,49 @@ a {
     box-shadow: 0 12px 10px 0 rgb(0 0 0 / 10%);
     border-top: 0px solid #eeeeee;
 
-    transition: height 0.3s,border-bottom 0.3s; 
+    transition: height 0.3s, border-bottom 0.3s;
 }
-#topPage .topPageOption ul{
-    width:calc(100% / 6);
+
+#topPage .topPageOption ul {
+    width: calc(100% / 6);
     height: 0%;
     /* border-right: 1px solid gray; */
     padding-left: 1em;
-    float: left ;
+    float: left;
     position: relative;
     top: 1em;
     overflow: hidden;
     transition: height 0.3s;
 }
-#topPage .topPageOption ul li{
+
+#topPage .topPageOption ul li {
     font-size: 14px;
     clear: both;
     height: 37px;
     text-align: left;
 }
-#topPage .topOptions:hover .topPageOption{
+
+#topPage .topOptions:hover .topPageOption {
     height: 190px;
     border-top: 2px solid #eeeeee;
 }
-#topPage .topOptions:hover .topPageOption ul{
+
+#topPage .topOptions:hover .topPageOption ul {
     height: 80%;
 }
-#topPage .topPageOption ul li a{
-    transition: color 0.3s; 
+
+#topPage .topPageOption ul li a {
+    transition: color 0.3s;
 }
-#topPage .topPageOption ul li :hover{
+
+#topPage .topPageOption ul li :hover {
     background-image: var(--list_Check_Color);
     -webkit-background-clip: text;
     color: transparent;
 }
+
 /* 内容栏样式 标题 */
-#contentPageTitle{
+#contentPageTitle {
     width: 100%;
     height: 90vh;
     background-image: url(../../static/homeBg.png);
@@ -132,7 +165,8 @@ a {
     background-repeat: no-repeat;
     padding-top: 32vh;
 }
-#contentPageTitle .bigTitle{
+
+#contentPageTitle .bigTitle {
     width: 650px;
     height: auto;
     margin: 0px auto;
@@ -142,75 +176,89 @@ a {
 
     text-align: center;
 }
-#contentPageTitle .bigTitle .titleTime{
+
+#contentPageTitle .bigTitle .titleTime {
     font-size: 0.5em;
     position: relative;
     top: -40px;
 }
+
 /* 内容栏样式 1 */
-#contentPage_1{
+#contentPage_1 {
     width: 100%;
     height: 24em;
     background-color: #eeeeee;
 }
-#contentPage_1 .pageText_1{
+
+#contentPage_1 .pageText_1 {
     font-size: 1.2em;
     font-weight: 500;
     margin-left: 500px;
     margin-top: 110px;
     float: left;
 }
-#contentPage_1 .pageText_1 .text_0{
+
+#contentPage_1 .pageText_1 .text_0 {
     font-weight: 600;
 }
+
 /* 内容栏样式 2 */
-#contentPage_2{
+#contentPage_2 {
     width: 63vw;
     height: 53em;
     background-color: white;
-    padding-top:5em;
+    padding-top: 5em;
     margin: 0px auto;
 }
-#contentPage_2 .showBox1{
+
+#contentPage_2 .showBox1 {
     max-width: 50%;
     width: 50%;
     height: 650px;
     float: left;
     overflow: hidden;
 }
-#contentPage_2 .showBox1 img{
+
+#contentPage_2 .showBox1 img {
     height: 650px;
     float: left;
 }
-#contentPage_2 .showText1{
+
+#contentPage_2 .showText1 {
     width: 50%;
     float: right;
     margin-top: 12em;
     padding-left: 12%;
 }
-#contentPage_2 .showText1 .text_1,#contentPage_2 .showText1 .text_2{
+
+#contentPage_2 .showText1 .text_1,
+#contentPage_2 .showText1 .text_2 {
     font-size: 3em;
     font-weight: 500;
 }
-#contentPage_2 .showText1 .text_3{
+
+#contentPage_2 .showText1 .text_3 {
     height: 27px;
     font-size: 20px;
     font-weight: 100;
     border-bottom: 1px solid black;
 }
-#contentPage_2 .showText1 .text_4{
-    width:455px;
+
+#contentPage_2 .showText1 .text_4 {
+    width: 455px;
     font-size: 13px;
     font-weight: 400;
     line-height: 23px;
 }
+
 /* 内容栏样式 3 */
-#contentPage_3{
+#contentPage_3 {
     width: 63vw;
     height: 570px;
     margin: 0px auto;
 }
-#contentPage_3 .showBox1{
+
+#contentPage_3 .showBox1 {
     width: 100%;
     height: 490px;
     background-image: url(../../static/showImg2.png);
@@ -218,45 +266,123 @@ a {
     background-repeat: no-repeat;
     position: relative;
 }
-#contentPage_3 .showBox1 .text_1{
-    color:white;
+
+#contentPage_3 .showBox1 .text_1 {
+    color: white;
     font-size: 2.5em;
-    letter-spacing:7px;
+    letter-spacing: 7px;
     position: absolute;
     right: 130px;
     top: 80px;
 }
-#contentPage_3 .showBox1 .text_2{
-    color:white;
+
+#contentPage_3 .showBox1 .text_2 {
+    color: white;
     font-size: 0.9em;
     font-weight: 100;
-    letter-spacing:1px;
+    letter-spacing: 1px;
     position: absolute;
     right: 130px;
     top: 150px;
 }
 
 /* 底部样式 */
-#bottomPage{
+#bottomPage {
     width: 100%;
     height: 10vh;
     background-color: #eeeeee;
     padding-top: 30px;
 }
-#bottomPage .textBox{
+
+#bottomPage .textBox {
     width: 63vw;
     height: 100%;
     margin: 0px auto;
 }
-#bottomPage .textBox .textBG{
+
+#bottomPage .textBox .textBG {
     width: auto;
     height: 14px;
     float: right;
-}  
-#bottomPage span,#bottomPage a{
+}
+
+#bottomPage span,
+#bottomPage a {
     color: gray;
     font-size: 14px;
 }
-#bottomPage a:hover{
+
+#bottomPage a:hover {
     text-decoration: underline;
+}
+
+/* 手机屏幕适配 */
+@media screen and (max-width: 1020px) {
+    #topPage .topOptions {
+        width: 0px;
+        /* width: 25vw; */
+        height: 100vh;
+        top: 0px;
+        right: 0px;
+        background-color: #eeeeee;
+        box-shadow: 0 0 5px rgb(0 0 0 / 40%);
+        /* padding: 0px; */
+        /* padding: 50px 25px; */
+        padding-left: 0px;
+        overflow: hidden;
+        position: fixed;
+    }
+
+    #topPage .topOptions li {
+        width: 100%;
+        clear: both;
+        font-size: 1.1em;
+        height: 0px;
+        overflow: hidden;
+    }
+
+    #topPage .topPageOption {
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+        transition: none;
+        background-color: #eeeeee;
+        padding-left: 0px;
+        margin-top: none;
+        box-shadow: none;
+        border-top: 0px solid #eeeeee;
+    }
+
+    #topPage .topPageOption ul {
+        width: 100%;
+        padding-bottom: 2em;
+        padding-left: 0px;
+        margin-left: -10px;
+    }
+
+    #topPage .topOptions:hover .topPageOption ul {
+        height: auto;
+    }
+
+    #topPage .topPageOption ul li {
+        text-align: center;
+        line-height: 250%;
+        font-size: 1.1em;
+    }
+
+    .optionMore {
+        display: inline-block;
+    }
+
+    #topPage .optionMore:hover+.topOptions,
+    #topPage .topOptions:hover {
+        width: 25vw;
+        padding-left: 20px;
+        transition: width 0.3s;
+    }
+
+    #topPage .topOptions:hover .topPageOption {
+        height: auto;
+        border-top: none;
+    }
 }

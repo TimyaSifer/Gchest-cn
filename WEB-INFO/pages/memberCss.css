@@ -228,3 +228,25 @@ body {
     border:none;
     box-shadow: none;
 }
+
+@media only screen and (max-width: 1200px) {
+    #list_admin_box ul li {
+        width: calc(100% - 20px);
+    } 
+}
+@media screen and (max-width: 750px){
+    #show_title{
+        padding-left: 20px;
+    }
+    #list_admin_box{
+        width: calc(100% - 40px);
+    }
+}
+@media screen and (max-width: 450px){
+    #show_title{
+        zoom: 0.7;
+    }
+    #list_admin_box ul li{
+        zoom: 0.7;
+    }
+}
