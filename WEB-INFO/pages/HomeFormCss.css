@@ -386,3 +386,19 @@ a {
         border-top: none;
     }
 }
+@media screen and (max-width: 600px){
+    #topPage .optionMore:hover+.topOptions,
+    #topPage .topOptions:hover {
+        width: 40vw;
+        padding-left: 20px;
+        transition: width 0.3s;
+    }
+}
+@media screen and (max-width: 300px){
+    #topPage .optionMore:hover+.topOptions,
+    #topPage .topOptions:hover {
+        width: 80vw;
+        padding-left: 20px;
+        transition: width 0.3s;
+    }
+}
