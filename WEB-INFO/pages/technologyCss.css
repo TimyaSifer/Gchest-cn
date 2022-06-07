@@ -22,7 +22,8 @@ body {
     font-weight: 200;
     padding-left: 100px;
     line-height: 200%;
-    background-color: #eeeeee;
+    background-color: transparent;
+    position: relative;
 }
 
 /* 背景logo */
