@@ -481,6 +481,39 @@ input {
 
 
 /* 分辨率适配 */
+@media only screen and (max-width: 1600px) {
+    #show_box .infBox:first-child .userInfor ul li .textName {
+        font-size: 14px;
+    }
+
+    #show_box .infBox:first-child .userInfor .maxLenght {
+        font-size: 14px;
+    }
+
+    * {
+        --textLongLen: 45%
+    }
+
+    #show_box .infBox:first-child,
+    #show_box .infBox:last-child {
+        height: 130vh;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    #show_box .infBox:first-child {
+        width: calc(100% - 10px);
+        height: 130vh;
+        margin-bottom: 20px;
+    }
+
+    #show_box .infBox:last-child {
+        width: calc(100% - 10px);
+        height: 130vh;
+    }
+}
+
+
 @media (-webkit-min-device-pixel-ratio: 0.75) {
     body {
         zoom: 1.3;
@@ -521,38 +554,6 @@ input {
 
     #show_box .infBox:first-child,
     #show_box .infBox:last-child {
-        height: 130vh !important;
-    }
-}
-
-@media only screen and (max-width: 1600px) {
-    #show_box .infBox:first-child .userInfor ul li .textName {
-        font-size: 14px;
-    }
-
-    #show_box .infBox:first-child .userInfor .maxLenght {
-        font-size: 14px;
-    }
-
-    * {
-        --textLongLen: 45%
-    }
-
-    #show_box .infBox:first-child,
-    #show_box .infBox:last-child {
-        height: 130vh;
-    }
-}
-
-@media only screen and (max-width: 1280px) {
-    #show_box .infBox:first-child {
-        width: calc(100% - 10px);
-        height: 130vh;
-        margin-bottom: 20px;
-    }
-
-    #show_box .infBox:last-child {
-        width: calc(100% - 10px);
-        height: 130vh;
+        height: 90vh !important;
     }
 }

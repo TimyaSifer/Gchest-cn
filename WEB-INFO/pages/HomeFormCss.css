@@ -6,6 +6,7 @@
     box-sizing: border-box !important;
     user-select: none;
     list-style: none;
+    font-family: "微软雅黑";
 }
 
 a {
@@ -386,7 +387,9 @@ a {
         border-top: none;
     }
 }
-@media screen and (max-width: 600px){
+
+@media screen and (max-width: 600px) {
+
     #topPage .optionMore:hover+.topOptions,
     #topPage .topOptions:hover {
         width: 40vw;
@@ -394,7 +397,9 @@ a {
         transition: width 0.3s;
     }
 }
-@media screen and (max-width: 300px){
+
+@media screen and (max-width: 300px) {
+
     #topPage .optionMore:hover+.topOptions,
     #topPage .topOptions:hover {
         width: 80vw;

@@ -1,0 +1,195 @@
+/* 全局设置 */
+body {
+    background-color: #eeeeee;
+}
+
+/* 复杂颜色定义 */
+* {
+    --document: #185ABD;
+    --document_hover:#cbdbf2;
+    --Slider: gray;
+    --list_check_bg:#f2e2cb;
+    --list_check_left:#bd7b18;
+}
+
+/* 标题样式 */
+#show_title {
+    width: 100%;
+    height: 100px;
+    font-size: 3em;
+    font-weight: 200;
+    padding-left: 100px;
+    line-height: 200%;
+    background-color: #eeeeee;
+}
+
+/* 背景logo */
+.backLogo {
+    width: 800px;
+    height: 800px;
+    background-image: url(../../static/logoBg.png);
+    background-size: 100%;
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+/* 列表项 */
+#list_document_box {
+    width: calc(100% - 200px);
+    height: 75vh;
+    background-color: transparent;
+    position: relative;
+    left: 100px;
+}
+
+#list_document_box ul {
+    width: 25%;
+    height: 100%;
+    /* background-color: black; */
+    overflow-y: scroll;
+    float: left;
+}
+
+#list_document_box ul::-webkit-scrollbar {
+    width: 4px;
+}
+
+#list_document_box ul::-webkit-scrollbar-thumb {
+    background-color: var(--Slider);
+    border-radius: 3px;
+}
+
+#list_document_box ul li {
+    width: calc(100% - 20px);
+    height: 80px;
+    float: left;
+    margin: 10px;
+    border-left: 10px solid var(--document);
+    box-shadow: 0 0 5px rgb(0 0 0 / 40%);
+    background-color: #eeeeee;
+    cursor: pointer;
+}
+#list_document_box ul li:not(.listCheck):hover{
+    background-color: var(--document_hover);
+}
+
+#list_document_box ul .listCheck{
+    border-left: 10px solid var(--list_check_left);
+    background-color: var(--list_check_bg);
+}
+
+#list_document_box ul li .wordCard {
+    width: 100%;
+    height: 100%;
+}
+
+#list_document_box ul li .wordCard .wordTitle {
+    width: 100%;
+    height: 40%;
+    padding-left: 10px;
+    font-weight: 600;
+    border-bottom: 1px solid #dbdbdb;
+    line-height: 200%;
+}
+
+#list_document_box ul li .wordCard .Introduction {
+    width: calc(100% - 20px);
+    height: calc(60% - 15px);
+    font-size: 12px;
+    margin: 5px 10px;
+    overflow: hidden;
+}
+
+.pdfType{
+    display: none;
+}
+
+/* 文档内容 */
+#list_document_box .wordContentBox {
+    width: calc(75% - 20px);
+    height: 100%;
+    float: left;
+    margin: 10px;
+    box-shadow: 0 0 5px rgb(0 0 0 / 40%);
+    background-color: #eeeeee;
+    border-radius: 5px;
+    /* border: 2px solid var(--Slider); */
+    overflow: hidden;
+}
+.wordContentBox .Init{
+    width: 100%;
+    height: 100%;
+    background-image: url(../../static/noThing.png);
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.wordContentBox .media{
+    position: relative;
+}
+
+#list_document_box .wordContentBox .contentTitle {
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+    position: relative;
+    z-index: 20;
+    background-color: #eeeeee;
+}
+
+#list_document_box .wordContentBox .contentTitle .wordTitle {
+    width: calc(100% - 20px);
+    height: 40%;
+    font-weight: 600;
+    line-height: 160%;
+    user-select: text !important;
+}
+
+#list_document_box .wordContentBox .contentTitle .wordInfor {
+    width: calc(100% - 20px);
+    height: 60%;
+    line-height: 200%;
+}
+
+#list_document_box .wordContentBox .contentTitle .wordInfor div {
+    float: left;
+    width: 15%;
+    color: gray;
+    font-size: 14px;
+    user-select: text !important;
+}
+#list_document_box .wordContentBox .contentTitle .wordInfor div:last-child {
+    width: 30%;
+}
+
+#list_document_box .wordContentBox .contentText {
+    width: calc(100% - 5px);
+    height: calc(100% - 80px);
+    padding: 10px;
+    font-size: 14px;
+    overflow-y: scroll;
+    user-select: text !important;
+    line-height: 27px;
+}
+#list_document_box .wordContentBox .contentText::-webkit-scrollbar {
+    width: 4px;
+}
+
+#list_document_box .wordContentBox .contentText::-webkit-scrollbar-thumb {
+    background-color: var(--Slider);
+    border-radius: 3px;
+}
+
+/* pdf导入器 */
+#list_document_box .wordContentBox .contentTextLink {
+    width: 100%;
+    height: calc(100% - 80px);
+    font-size: 14px;
+    user-select: text !important;
+    line-height: 27px;
+}

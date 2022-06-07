@@ -22,6 +22,9 @@ let option_7 = new listUrl("管理组档案", "Member/admin.html"); //管理组�
 // 成员功能
 let option_8 = new listUrl("人事档案提交", "MemberFuc/submission.html"); //人事档案提交
 
+// 技术文档
+let option_9 = new listUrl("技术分享", "Technology/technology.html"); //技术分享
+
 // 选项
 var topList = $(".topPageOption ul li a");
 var nameType = "none";
