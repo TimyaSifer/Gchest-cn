@@ -1,7 +1,8 @@
 /* 全局设置 */
-*{
+* {
     outline: none;
 }
+
 body {
     background-color: #eeeeee;
 }
