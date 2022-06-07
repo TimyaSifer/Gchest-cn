@@ -36,7 +36,7 @@ function objFuc(jsonType) {
 
             var listMod = document.createElement("li"); // 以 DOM 创建新元素
 
-            listMod.innerHTML = "<div class='wordCard'><div class='wordTitle'></div><div class='Introduction'></div></div>";
+            listMod.innerHTML = "<div class='wordCard'><div class='wordTitle'></div><div class='Introduction'></div><span class='typeCreate pdfType'></span><span class='typeTime pdfType'></span><span class='typeUrl pdfType'>alphaImg</span></div>";
             $("#list_document_box ul").prepend(listMod);
         }
 
@@ -65,7 +65,7 @@ $("#list_document_box ul").on('click', 'li', function () {
     $(".wordContentBox .contentTitle .wordTitle").text($($(this).children()[0].children[0]).text());
     $(".wordContentBox .contentTitle .wordInfor .wordCreate").text("作者:" + $($(this).children()[0].children[2]).text());
     $(".wordContentBox .contentTitle .wordInfor .wordTime").text("创建时间:" + $($(this).children()[0].children[3]).text());
-    var typeUrl  = $($(this).children()[0].children[4]).text();
+    var typeUrl = $($(this).children()[0].children[4]).text();
     // console.log(eval("../static/documentPDF/" + typeUrl + ".pdf"));
     $(".wordContentBox .media iframe").attr("src", ("../static/documentPDF/" + typeUrl + ".pdf"))
 })
