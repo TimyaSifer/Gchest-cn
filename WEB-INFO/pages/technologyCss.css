@@ -10,6 +10,8 @@ body {
     --Slider: gray;
     --list_check_bg:#f2e2cb;
     --list_check_left:#bd7b18;
+
+    --noThing:#4A4A4A;
 }
 
 /* 标题样式 */
@@ -127,6 +129,7 @@ body {
     background-size: 110%;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: var(--noThing);
 }
 .wordContentBox .media{
     position: relative;
@@ -138,7 +141,7 @@ body {
     border-bottom: 1px solid gray;
     padding: 10px;
     position: relative;
-    z-index: 20;
+    z-index: 9;
     background-color: #eeeeee;
 }
 
@@ -147,7 +150,6 @@ body {
     height: 40%;
     font-weight: 600;
     line-height: 160%;
-    user-select: text !important;
 }
 
 #list_document_box .wordContentBox .contentTitle .wordInfor {
@@ -161,7 +163,6 @@ body {
     width: 15%;
     color: gray;
     font-size: 14px;
-    user-select: text !important;
 }
 #list_document_box .wordContentBox .contentTitle .wordInfor div:last-child {
     width: 30%;
