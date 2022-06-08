@@ -505,6 +505,9 @@ input {
 /* 分辨率适配 */ 
 @media only screen and (max-width: 770px) {
 
+    body{
+        touch-action: pan-y;
+    }
     /* 标题样式 */
     #show_title {
         padding-left: 20px;
@@ -557,15 +560,24 @@ input {
         padding-right: 42px;
         background-position-x: 33px;
     }
+    #show_box .infBox:first-child {
+        box-shadow: none;
+    }
+    .userInforBox .userInfor {
+        width: calc(100% - 20px);
+    }
 }
 @media only screen and (max-width: 480px){
     .userSkills div ul li .userDepartment ul .departmentCheck {
         padding-right: 11px;
         background-position-x: 8px;
     }
+    .userInforBox .userInfor {
+        width: calc(100% - 20px);
+    }
 }
 @media (-webkit-min-device-pixel-ratio: 0.75) {
-    body {
+    #show_title,#show_box,.userInforBox {
         zoom: 1.3;
     }
 
@@ -576,7 +588,7 @@ input {
 }
 
 @media (-webkit-min-device-pixel-ratio: 1) {
-    body {
+    #show_title,#show_box,.userInforBox {
         zoom: 1;
     }
 
@@ -587,7 +599,7 @@ input {
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.25) {
-    body {
+    #show_title,#show_box,.userInforBox {
         zoom: 0.8;
     }
 
@@ -598,7 +610,7 @@ input {
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5) {
-    body {
+    #show_title,#show_box,.userInforBox {
         zoom: 0.8;
     }
 
