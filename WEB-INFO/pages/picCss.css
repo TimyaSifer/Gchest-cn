@@ -189,6 +189,20 @@ body {
         width: calc(50% - 30px);
         height: 200px;
     }
+    #show_box_elite ul li div:first-child {
+        height: 85%;
+    }
+    
+    #show_box_elite ul li div:last-child {
+        height: 15%;
+    }
+    #show_box_elite ul li div span {
+        line-height: 30px;
+    }
+    #bigPic div img {
+        max-width: 760px;
+    }
+    
 
 }
 @media only screen and (max-width: 480px) {
@@ -209,6 +223,12 @@ body {
     #show_box_elite ul li {
         width: calc(100% - 30px);
         height: 250px;
+    }
+    #show_box_elite ul li div span {
+        line-height: 27px;
+    }
+    #bigPic div img {
+        max-width: 470px;
     }
 
 }
