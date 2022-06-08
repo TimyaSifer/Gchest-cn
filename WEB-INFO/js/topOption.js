@@ -33,10 +33,12 @@ var urlType = "none";
 for (let i = 0; i < Array.prototype.slice.call(topList).length; i++) {
     if (document.title == "黄金之匣 | 像素美术工作社") {
         $(topList[i]).attr("href", eval("option_" + i + ".objUrl"));
+        $(topList[1]).attr("href", option_1.objUrl);
     } else {
         // console.log(eval("../option_" + i + ".objUrl"));
         urlType = eval("option_" + i + ".objUrl");
         $(topList[i]).attr("href", "../" + urlType);
+        $(topList[1]).attr("href", option_1.objUrl);
     }
 
     $(topList[i]).text(eval("option_" + i + ".objName"));
