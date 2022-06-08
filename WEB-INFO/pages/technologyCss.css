@@ -207,7 +207,6 @@ body {
     line-height: 27px;
 }
 
-
 @media only screen and (max-width: 1080px) {
     #list_document_box ul {
         width: calc(100% + 100%);
