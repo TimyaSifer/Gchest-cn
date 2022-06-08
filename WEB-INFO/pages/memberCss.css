@@ -296,7 +296,7 @@ body {
 }
 @media only screen and (max-width: 480px){
     body{
-        zoom: 0.05;
+        zoom: 0.95;
     }
     #list_admin_box {
         height: 85vh;
