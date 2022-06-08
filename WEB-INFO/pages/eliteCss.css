@@ -36,19 +36,20 @@ body {
 
 /* 展示盒样式 */
 #show_box_elite {
-    width: 100%;
+    width: calc(100% - 200px);
     position: relative;
+    left: 100px;
 }
 
 /* 展示列表样式 */
 #show_box_elite ul {
     margin: 0px auto;
-    width: 90vw;
+    width: auto;
 }
 
 #show_box_elite ul li {
-    width: 400px;
-    height: 250px;
+    width: 390px;
+    height: 240px;
     background-color: #eeeeee;
     border-left: 10px solid var(--skin);
     box-shadow: 0 0 5px rgb(0 0 0 / 40%);
@@ -107,4 +108,45 @@ body {
     float: right;
     padding-right: 10px;
     color: gray;
+}
+
+@media only screen and (max-width: 770px) {
+
+    /* 标题样式 */
+    #show_title {
+        padding-left: 20px;
+    }
+
+    /* 展示盒样式 */
+    #show_box_elite {
+        width: calc(100% - 40px);
+        position: relative;
+        left: 20px;
+    }
+    #show_box_elite ul li {
+        width: calc(50% - 30px);
+        height: 200px;
+    }
+
+}
+@media only screen and (max-width: 480px) {
+
+    /* 标题样式 */
+    #show_title {
+        padding-left: 20px;
+        font-size: 2em;
+    }
+
+    /* 展示盒样式 */
+    #show_box_elite {
+        width: calc(100% - 40px);
+        position: relative;
+        left: 20px;
+        top: -40px;
+    }
+    #show_box_elite ul li {
+        width: calc(100% - 30px);
+        height: 250px;
+    }
+
 }

@@ -153,6 +153,50 @@ body {
     }
 }
 
+@media only screen and (max-width: 910px) {
+    body{
+        overflow: hidden;
+    }
+    #siftBox {
+        width: 120px;
+        height: 100vh;
+        padding-left: 0px;
+        position: relative;
+        border-right: 1px solid gray;
+        box-shadow: 0 0 5px rgb(0 0 0 / 40%);
+    }
+    #siftBox ul li {
+        width: 100%;
+        height: 50px;
+        border: 0px solid gray;
+        border-bottom: 1px solid #dbdbdb;
+        border-radius: 0px;
+        line-height: 50px;
+    }
+    #list_member_box {
+        width: calc(100% - 200px);
+        height: 80vh;
+        left: 15%;
+        right: 0;
+        top: 120px;
+        bottom: 0;
+    }
+    /* 标题样式 */
+    #show_title {
+        padding-left: 20px;
+    }
+    @media only screen and (max-width: 530px){
+        #list_member_box {
+            width: calc(100% - 140px);
+            height: 80vh;
+            left: 110px;
+            right: 0;
+            top: 120px;
+            bottom: 0;
+        }
+    }
+}
+
 
 /* 管理组档案 列表项 */
 #list_admin_box {
@@ -221,33 +265,38 @@ body {
     float: left;
     padding: 5px 0px;
 }
-#list_admin_box ul li .memberName .adminInf ul li{
+
+#list_admin_box ul li .memberName .adminInf ul li {
     width: auto;
     height: auto;
     clear: both;
     margin-bottom: 0px;
-    border:none;
+    border: none;
     box-shadow: none;
 }
 
 @media only screen and (max-width: 1200px) {
     #list_admin_box ul li {
         width: calc(100% - 20px);
-    } 
+    }
 }
-@media screen and (max-width: 750px){
-    #show_title{
+
+@media screen and (max-width: 750px) {
+    #show_title {
         padding-left: 20px;
     }
-    #list_admin_box{
+
+    #list_admin_box {
         width: calc(100% - 40px);
     }
 }
-@media screen and (max-width: 450px){
-    #show_title{
+
+@media screen and (max-width: 450px) {
+    #show_title {
         zoom: 0.7;
     }
-    #list_admin_box ul li{
+
+    #list_admin_box ul li {
         zoom: 0.7;
     }
 }

@@ -6,12 +6,12 @@ body {
 /* 复杂颜色定义 */
 * {
     --document: #185ABD;
-    --document_hover:#cbdbf2;
+    --document_hover: #cbdbf2;
     --Slider: gray;
-    --list_check_bg:#f2e2cb;
-    --list_check_left:#bd7b18;
+    --list_check_bg: #f2e2cb;
+    --list_check_left: #bd7b18;
 
-    --noThing:#4A4A4A;
+    --noThing: #4A4A4A;
 }
 
 /* 标题样式 */
@@ -49,12 +49,18 @@ body {
     left: 100px;
 }
 
-#list_document_box ul {
+#list_document_box .ulBox {
     width: 25%;
     height: 100%;
     /* background-color: black; */
-    overflow-y: scroll;
     float: left;
+}
+
+#list_document_box ul {
+    width: 100%;
+    height: 100%;
+    /* background-color: black; */
+    overflow-y: scroll;
 }
 
 #list_document_box ul::-webkit-scrollbar {
@@ -76,11 +82,12 @@ body {
     background-color: #eeeeee;
     cursor: pointer;
 }
-#list_document_box ul li:not(.listCheck):hover{
+
+#list_document_box ul li:not(.listCheck):hover {
     background-color: var(--document_hover);
 }
 
-#list_document_box ul .listCheck{
+#list_document_box ul .listCheck {
     border-left: 10px solid var(--list_check_left);
     background-color: var(--list_check_bg);
 }
@@ -91,12 +98,13 @@ body {
 }
 
 #list_document_box ul li .wordCard .wordTitle {
-    width: 100%;
+    width: calc(100% - 20px);
     height: 40%;
     padding-left: 10px;
     font-weight: 600;
     border-bottom: 1px solid #dbdbdb;
     line-height: 200%;
+    overflow: hidden;
 }
 
 #list_document_box ul li .wordCard .Introduction {
@@ -107,7 +115,7 @@ body {
     overflow: hidden;
 }
 
-.pdfType{
+.pdfType {
     display: none;
 }
 
@@ -123,7 +131,8 @@ body {
     /* border: 2px solid var(--Slider); */
     overflow: hidden;
 }
-.wordContentBox .Init{
+
+.wordContentBox .Init {
     width: 100%;
     height: 100%;
     background-image: url(../../static/noThing.png);
@@ -132,7 +141,8 @@ body {
     background-repeat: no-repeat;
     background-color: var(--noThing);
 }
-.wordContentBox .media{
+
+.wordContentBox .media {
     position: relative;
 }
 
@@ -142,7 +152,6 @@ body {
     border-bottom: 1px solid gray;
     padding: 10px;
     position: relative;
-    z-index: 9;
     background-color: #eeeeee;
 }
 
@@ -165,6 +174,7 @@ body {
     color: gray;
     font-size: 14px;
 }
+
 #list_document_box .wordContentBox .contentTitle .wordInfor div:last-child {
     width: 30%;
 }
@@ -178,6 +188,7 @@ body {
     user-select: text !important;
     line-height: 27px;
 }
+
 #list_document_box .wordContentBox .contentText::-webkit-scrollbar {
     width: 4px;
 }
@@ -194,4 +205,74 @@ body {
     font-size: 14px;
     user-select: text !important;
     line-height: 27px;
+}
+
+
+@media only screen and (max-width: 1080px) {
+    #list_document_box ul {
+        width: calc(100% + 100%);
+        height: 120px;
+        overflow-y: hidden;
+        overflow-x: scroll;
+    }
+
+    #list_document_box .ulBox {
+        width: calc(100% - 20px);
+        height: 120px;
+        overflow-y: hidden;
+        overflow-x: scroll;
+    }
+
+    #list_document_box ul li {
+        width: 210px;
+        height: 80px;
+    }
+
+    /* 文档 */
+    #list_document_box .wordContentBox {
+        width: calc(100% - 20px);
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    #list_document_box {
+        width: calc(100% - 40px);
+        left: 20px;
+    }
+
+    /* 文档 */
+    #list_document_box .wordContentBox {
+        height: 110%;
+    }
+
+    /* 标题样式 */
+    #show_title {
+        padding-left: 20px;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1) {
+    body {
+        zoom: 1;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.25) {
+    body {
+        zoom: 0.8;
+    }
+
+    #list_document_box {
+        height: 95vh;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) {
+    body {
+        zoom: 0.8;
+    }
+
+    #list_document_box {
+        height: 85vh;
+    }
 }
