@@ -430,6 +430,7 @@ a {
     #contentPage_1 .pageText_1 {
         margin-left: 5%;
         margin-top: 45px;
+        zoom: 0.9;
     }
 
     #contentPage_2 {
@@ -505,7 +506,7 @@ a {
 
 @media only screen and (max-width: 480px) {
     #contentPageTitle {
-        background-size: 326%;
+        background-size: 360%;
         background-position-x: 20%;
     }
 
@@ -548,7 +549,7 @@ a {
 
     #contentPage_2 .showText1,
     #contentPage_3 .showBox1 span {
-        zoom: 0.6;
+        zoom: 0.5;
     }
 
     #maxImgBg .topImgBox {
