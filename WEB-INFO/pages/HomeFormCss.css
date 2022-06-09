@@ -31,8 +31,13 @@ a {
 }
 
 #maxImgBg .topImgBox {
-    width: 60%;
-    margin: 300px auto;
+    width: 20%;
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 300px;
+    bottom: 0;
 }
 
 #maxImgBg img {
@@ -407,5 +412,146 @@ a {
         width: 80vw;
         padding-left: 20px;
         transition: width 0.3s;
+    }
+}
+
+
+@media only screen and (max-width: 770px) {
+    #contentPageTitle {
+        height: 95vh;
+        background-size: 200%;
+    }
+
+    #contentPageTitle .bigTitle {
+        width: 80%;
+        height: auto;
+    }
+
+    #contentPage_1 .pageText_1 {
+        margin-left: 10%;
+        margin-top: 45px;
+    }
+
+    #contentPage_2 {
+        width: 90vw;
+        height: 32em;
+    }
+
+    #contentPage_2 .showBox1 {
+        max-width: 100%;
+        width: 100%;
+        height: 400px;
+    }
+
+    #contentPage_2 .showBox1 img {
+        width: 700px;
+        height: auto;
+        /* height: 650px; */
+        position: relative;
+        top: -260px;
+    }
+
+    #contentPage_2 .showText1 {
+        position: absolute;
+        width: 60%;
+        margin-top: 10px;
+        padding-left: 10px;
+        color: white;
+    }
+
+    #contentPage_2 .showText1 .text_3 {
+        height: 27px;
+        font-size: 20px;
+        font-weight: 100;
+        border-bottom: 1px solid white;
+    }
+
+    #contentPage_3 {
+        width: 90vw;
+        height: 320px;
+    }
+
+    #contentPage_3 .showBox1 .text_1 {
+        right: 20px;
+        top: 20px;
+    }
+
+    #contentPage_3 .showBox1 .text_2 {
+        right: 20px;
+        top: 80px;
+    }
+
+    #maxImgBg .topImgBox {
+        width: 45%;
+    }
+
+    #contentPageTitle .bigTitle {
+        font-size: 3em;
+    }
+
+    #contentPageTitle .bigTitle .titleTime {
+        top: -20px;
+    }
+
+    #contentPage_1 {
+        height: 15em;
+    }
+
+    #contentPage_3 .showBox1 {
+        height: 400px;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    #contentPageTitle {
+        background-size: 326%;
+        background-position-x: 20%;
+    }
+
+    #contentPageTitle .bigTitle {
+        width: 100%;
+    }
+
+    #contentPageTitle {
+        height: 95vh;
+    }
+
+    #contentPage_2 .showBox1 img {
+        width: 457px;
+        top: -160px;
+    }
+
+    #contentPage_2 .showBox1 {
+        height: 300px;
+    }
+
+    #contentPage_2 {
+        padding-top: 2em;
+    }
+
+    #contentPage_2 {
+        height: 23em;
+    }
+
+    #contentPage_3 {
+        height: 200px;
+    }
+
+    #contentPage_3 .showBox1 {
+        height: 280px;
+    }
+
+    #bottomPage .textBox {
+        width: 95vw;
+    }
+
+    #contentPage_2 .showText1,
+    #contentPage_3 .showBox1 span {
+        zoom: 0.65;
+    }
+
+    #maxImgBg .topImgBox {
+        width: 70%;
     }
 }

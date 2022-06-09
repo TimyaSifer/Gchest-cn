@@ -143,7 +143,7 @@ $(window).scroll(function () {
         $("#contentPage_2 .showBox1").fadeIn(1000);
         $("#contentPage_2 .showText1").fadeIn(1000);
     }
-    if ($(window).scrollTop() > 1200) {
+    if ($(window).scrollTop() > 800) {
         $("#contentPage_3 .showBox1").fadeIn(1000);
     }
 })

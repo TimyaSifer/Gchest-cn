@@ -482,7 +482,8 @@ input {
 }
 
 
-/* 分辨率适配 */
+
+
 @media only screen and (max-width: 1600px) {
     #show_box .infBox:first-child .userInfor ul li .textName {
         font-size: 14px;
@@ -501,61 +502,120 @@ input {
         height: 130vh;
     }
 }
+/* 分辨率适配 */ 
+@media only screen and (max-width: 770px) {
 
-@media only screen and (max-width: 1280px) {
+    body{
+        touch-action: pan-y;
+    }
+    /* 标题样式 */
+    #show_title {
+        padding-left: 20px;
+        font-size: 2em;
+        height: 65px;
+    }
+
+    #show_box {
+        width: 100%;
+    }
+
     #show_box .infBox:first-child {
-        width: calc(100% - 10px);
-        height: 130vh;
-        margin-bottom: 20px;
+        width: 100%;
+        margin-right: 0px;
+        border-left: 0px solid var(--border);
+    }
+
+    #show_box .infBox:first-child .userInfor .maxLenght {
+        display: none;
+    }
+
+    #show_box .infBox:first-child .userInfor .textLong {
+        width: 100%;
+    }
+
+    #show_box .infBox:first-child .userInfor ul li .userSexOption {
+        width: 100%;
+    }
+
+    #show_box .infBox:first-child .userInfor ul li .Interest {
+        width: 100%;
     }
 
     #show_box .infBox:last-child {
-        width: calc(100% - 10px);
-        height: 130vh;
+        width: 100%;
+    }
+
+    #show_box .infBox:first-child,
+    #show_box .infBox:last-child {
+        height: 120vh !important;
+    }
+
+    .userInforBox {
+        border-left: 0px solid var(--border);
+        margin-bottom: 0px;
+        box-shadow: none;
+    }
+
+    .userSkills div ul li .userDepartment ul .departmentCheck {
+        padding-right: 42px;
+        background-position-x: 33px;
+    }
+    #show_box .infBox:first-child {
+        box-shadow: none;
+    }
+    .userInforBox .userInfor {
+        width: calc(100% - 20px);
     }
 }
-
-
+@media only screen and (max-width: 480px){
+    .userSkills div ul li .userDepartment ul .departmentCheck {
+        padding-right: 11px;
+        background-position-x: 8px;
+    }
+    .userInforBox .userInfor {
+        width: calc(100% - 20px);
+    }
+}
 @media (-webkit-min-device-pixel-ratio: 0.75) {
-    body {
+    #show_title,#show_box,.userInforBox {
         zoom: 1.3;
     }
 
     #show_box .infBox:first-child,
     #show_box .infBox:last-child {
-        height: 60vh !important;
+        height: 60vh;
     }
 }
 
 @media (-webkit-min-device-pixel-ratio: 1) {
-    body {
+    #show_title,#show_box,.userInforBox {
         zoom: 1;
     }
 
     #show_box .infBox:first-child,
     #show_box .infBox:last-child {
-        height: 80vh !important;
+        height: 80vh;
     }
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.25) {
-    body {
+    #show_title,#show_box,.userInforBox {
         zoom: 0.8;
     }
 
     #show_box .infBox:first-child,
     #show_box .infBox:last-child {
-        height: 100vh !important;
+        height: 100vh;
     }
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5) {
-    body {
+    #show_title,#show_box,.userInforBox {
         zoom: 0.8;
     }
 
     #show_box .infBox:first-child,
     #show_box .infBox:last-child {
-        height: 90vh !important;
+        height: 90vh;
     }
 }

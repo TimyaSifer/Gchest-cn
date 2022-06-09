@@ -289,6 +289,19 @@ body {
     #list_admin_box {
         width: calc(100% - 40px);
     }
+    #list_admin_box {
+        height: 80vh;
+        top: 105px;
+    }
+}
+@media only screen and (max-width: 480px){
+    body{
+        zoom: 0.95;
+    }
+    #list_admin_box {
+        height: 85vh;
+        top: 115px;
+    }
 }
 
 @media screen and (max-width: 450px) {
