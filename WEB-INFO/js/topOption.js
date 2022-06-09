@@ -39,6 +39,7 @@ for (let i = 0; i < Array.prototype.slice.call(topList).length; i++) {
         urlType = eval("option_" + i + ".objUrl");
         $(topList[i]).attr("href", "../" + urlType);
         $(topList[1]).attr("href", option_1.objUrl);
+        $(topList[1]).attr("href", option_1.objUrl);
     }
 
     $(topList[i]).text(eval("option_" + i + ".objName"));

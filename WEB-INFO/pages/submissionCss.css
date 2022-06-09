@@ -547,7 +547,7 @@ input {
 
     #show_box .infBox:first-child,
     #show_box .infBox:last-child {
-        height: 125vh !important;
+        height: 130vh !important;
     }
 
     .userInforBox {
