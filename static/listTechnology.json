@@ -1,23 +1,23 @@
 [
     {
-        "Name": "将像素平面贴图转化为立体",
+        "Name": "C4D体素基础 将像素平面贴图转化为立体",
         "Introduction": "通过C4D的挤压操作将普通贴图制作为立体的道具模型",
         "Create": "缇米莉娅",
         "Time": "2016/12/04",
-        "Url": "Squeeze"
+        "Url": "C4D体素基础 将像素平面贴图转化为立体"
     },
     {
-        "Name": "C4D 布尔",
+        "Name": "C4D基础 布尔",
         "Introduction": "布尔工具的简单运用",
         "Create": "缇米莉娅",
         "Time": "2017/05/07",
-        "Url": "bool"
+        "Url": "C4D基础 布尔"
     },
     {
-        "Name": "C4D Alpha通道抠图",
+        "Name": "C4D PS 制图基础 使用PS通道进行抠图",
         "Introduction": "C4D 兼容高低版本的亲民 Alpha 通道抠图教程",
         "Create": "缇米莉娅",
         "Time": "2020/03/19",
-        "Url": "alphaImg"
+        "Url": "C4D PS 制图基础 使用PS通道进行抠图"
     }
 ]
