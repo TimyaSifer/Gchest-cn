@@ -56,7 +56,8 @@ function objFuc(jsonType) {
 
             ulLen ++;
         }
-
+console.log(ulLen);
+        console.log(230 * ulLen);
         $("#list_document_box ul").css("width",230 * ulLen);
         
 
