@@ -43,6 +43,7 @@ function objFuc(jsonType) {
         // 重载所有展示框
         objArr = $("#list_document_box ul li");
 
+        var ulLen = 0;
         // 填充展示框
         for (var i in data) {
 
@@ -52,7 +53,12 @@ function objFuc(jsonType) {
             $($(objArr[i]).children()[0].children[2]).text(_object.objCreate);
             $($(objArr[i]).children()[0].children[3]).text(_object.objTime);
             $($(objArr[i]).children()[0].children[4]).text(_object.objUrl);
+
+            ulLen ++;
         }
+
+        $("#list_document_box ul").css("width",230 * ulLen);
+        
 
     }
 
