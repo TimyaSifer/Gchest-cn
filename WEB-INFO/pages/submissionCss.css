@@ -523,6 +523,7 @@ input {
         width: 100%;
         margin-right: 0px;
         border-left: 0px solid var(--border);
+        float: none;
     }
 
     #show_box .infBox:first-child .userInfor .maxLenght {
@@ -531,6 +532,8 @@ input {
 
     #show_box .infBox:first-child .userInfor .textLong {
         width: 100%;
+        float: left;
+        margin-bottom: 20px;
     }
 
     #show_box .infBox:first-child .userInfor ul li .userSexOption {
