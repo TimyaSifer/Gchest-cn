@@ -25,6 +25,9 @@ let option_8 = new listUrl("人事档案提交", "MemberFuc/submission.html"); /
 // 技术文档
 let option_9 = new listUrl("技术分享", "Technology/technology.html"); //技术分享
 
+//关于我们
+let option_10 = new listUrl("社团简介", "About/introduction.html"); //社团简介
+
 // 选项
 var topList = $(".topPageOption ul li a");
 var nameType = "none";
