@@ -4,8 +4,7 @@ body {
 }
 
 /* 复杂颜色定义 */
-* {
-}
+* {}
 
 /* 标题样式 */
 #show_title {
@@ -34,35 +33,220 @@ body {
 } */
 
 /* 内容项 */
-#show_box{
+#show_box {
     width: calc(100% - 200px);
-    margin:auto;
+    height: 80vh;
+    margin: auto;
 }
-#show_box .show_list{
+
+/* 第一栏 */
+#show_box .show_list {
+    width: 40%;
+    /* height: calc(50% - 10px); */
     background-color: #eeeeee;
     border-left: 10px solid #cfdbd1;
     box-shadow: 0 0 5px rgb(0 0 0 / 40%);
-    margin-bottom: 20px;
+    margin: 10px;
+    float: left;
 
     transition: box-shadow 0.3s;
+
+    overflow: hidden;
 }
-#show_box .show_list:hover{
+
+#show_box .show_list:hover {
     box-shadow: 0 0 10px rgb(0 0 0 / 50%);
 }
-#show_box div .show_title{
+
+#show_box .show_big {
+    width: calc(60% - 40px);
+    height: 100%;
+}
+
+#show_box div .show_title {
     width: 100%;
     height: 50px;
-    border-bottom: 1px solid gray; 
+    border-bottom: 1px solid gray;
 
     padding-left: 10px;
     font-size: 25px;
     line-height: 45px;
     font-weight: 600;
 }
-#show_box div .show_text{
+
+#show_box div .show_text {
     width: 100%;
     height: auto;
-    padding: 10px 10px 50px 10px;
-    line-height:25px;
+    padding: 10px 20px 50px 20px;
+    line-height: 25px;
 
+}
+
+#show_box .show_big .show_text {
+    padding: 10px 3em 50px 3em;
+}
+
+#show_box .show_big .show_text span {
+    font-weight: 600;
+}
+
+#show_box .show_big .show_text img {
+    position: relative;
+    top: 5px;
+    cursor: pointer;
+}
+
+#show_box .show_big .show_text .textBlack {
+    font-weight: normal;
+    background-color: black;
+    cursor: text;
+    transition: background-color 0.1s;
+}
+
+#show_box .show_big .show_text .thought {
+    font-weight: normal;
+    display: none;
+}
+
+#show_box .show_big .show_text .introductionTime {
+    font-weight: normal;
+}
+
+#show_box .show_big .show_text .textBlack:hover {
+    background-color: transparent;
+    background-color: #dbdbdb;
+}
+
+#show_box div .show_log {
+    width: 50%;
+    height: 30%;
+    margin: auto;
+    background-image: url(../../static/logo3.png);
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 第二栏 */
+#show_box .show_2 {
+    /* height: calc(100% - 70px); */
+    height: 50px;
+    cursor: pointer;
+    transition: height 0.3s;
+}
+
+#show_box .show_2 .show_title {
+    border-bottom: 0px solid gray;
+    transition: border-bottom 0.3s;
+}
+
+#show_box .show_2 .show_text {
+    padding: 3em 3em 50px 3em;
+}
+
+#show_box .show_2 .show_text a {
+    float: left;
+    position: relative;
+    top: 2px;
+    margin-right: 5px;
+}
+
+/* 第三栏 */
+#show_box .show_3 {
+    /* height: calc(100% - 70px); */
+    height: 50px;
+    cursor: pointer;
+    transition: height 0.3s;
+}
+
+#show_box .show_3 .show_title {
+    border-bottom: 0px solid gray;
+    transition: border-bottom 0.3s;
+}
+
+#show_box .show_3 .show_text {
+    padding: 3em 3em 50px 3em;
+}
+
+#show_box .show_3 .show_text span {
+    font-weight: 600;
+}
+
+#show_box .show_3 .show_text a {
+    border-bottom: 1px solid black;
+}
+
+
+/* 选中 */
+#show_box .show_list_check {
+    height: calc(100% - 70px);
+    cursor: default;
+}
+
+#show_box .show_list_check .show_title {
+    border-bottom: 1px solid gray;
+}
+
+@media only screen and (max-width: 770px) {
+    #show_box div .show_log {
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #show_box .show_list {
+        float: none;
+        width: 100%;
+    }
+
+    #show_box .show_big {
+        height: 130%;
+    }
+
+    /* 选中 */
+    #show_box .show_list_check {
+        height: calc(120% - 70px);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    /* 标题样式 */
+    #show_title {
+        padding-left: 20px;
+    }
+
+    /* 内容项 */
+    #show_box {
+        width: 100%;
+    }
+
+    #show_box div .show_title {
+        border-top: 1px solid gray;
+    }
+
+    /* 第一栏 */
+    #show_box .show_list {
+        border-left: 0px solid #cfdbd1;
+        box-shadow: 0 0 0px rgb(0 0 0 / 40%);
+        margin: 0px;
+    }
+
+    #show_box .show_list:hover {
+        box-shadow: 0 0 0px rgb(0 0 0 / 50%);
+    }
+
+    #show_box .show_big {
+        height: 140%;
+    }
+
+    /* 选中 */
+    #show_box .show_list_check {
+        height: calc(135% - 70px);
+    }
+}
+@media (-webkit-min-device-pixel-ratio: 1.25) {
+    #show_box div .show_text {
+        zoom: 0.75;
+    }
 }
