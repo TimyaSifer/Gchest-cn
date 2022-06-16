@@ -27,6 +27,7 @@ let option_9 = new listUrl("技术分享", "Technology/technology.html"); //技�
 
 //关于我们
 let option_10 = new listUrl("社团简介", "About/introduction.html"); //社团简介
+let option_11 = new listUrl("联系我们", "About/contact.html"); //联系我们
 
 // 选项
 var topList = $(".topPageOption ul li a");

@@ -18,20 +18,6 @@ body {
     position: relative;
 }
 
-/* 背景logo */
-/* .backLogo {
-    width: 800px;
-    height: 800px;
-    background-image: url(../../static/logoBg.png);
-    background-size: 100%;
-    position: fixed;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-} */
-
 /* 内容项 */
 #show_box {
     width: calc(100% - 200px);
@@ -101,11 +87,6 @@ body {
     background-color: black;
     cursor: text;
     transition: background-color 0.1s;
-}
-
-#show_box .show_big .show_text .thought {
-    font-weight: normal;
-    display: none;
 }
 
 #show_box .show_big .show_text .introductionTime {
