@@ -64,7 +64,8 @@ body {
 }
 
 #show_box .contactCard ul li .listTitle {
-    width: 4em;
+    width: 100%;
+    text-align: center;
     margin: 10px auto;
     font-size: 20px;
     font-weight: 600;

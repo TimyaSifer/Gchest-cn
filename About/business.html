@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定制服务</title>
+
+    <link rel="shortcut icon" href="../static/pageIco.ico">
+
+    <script type="text/javascript" src="../WEB-INFO/js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="../WEB-INFO/pages/HomeFormCss.css">
+    <link rel="stylesheet" href="../WEB-INFO/pages/businessCss.css">
+
+    <script type="text/javascript" src="../WEB-INFO/js/homeFormJsCode.js"></script>
+</head>
+
+<body>
+    <!-- 顶部栏 -->
+    <div id="topPage">
+        <!-- logo -->
+        <a href="../index.html">
+            <div class="topLogo"></div>
+            <span class="topTitle">黄金之匣 美术工作社</span>
+        </a>
+
+        <div class="optionMore"></div>
+
+        <ul class="topOptions" style="z-index: 10;">
+            <li>官网首页</li>
+            <li>社团作品</li>
+            <li>社团成员</li>
+            <li>成员功能</li>
+            <li>技术文档</li>
+            <li>关于社团</li>
+
+            <!-- 顶部栏下拉框 -->
+            <div class="topPageOption">
+
+                <!-- 列 1 -->
+                <ul>
+                    <li><a>官网首页</a></li>
+                    <li><a target="_blank">论坛主页</a></li>
+                </ul>
+                <!-- 列 2 -->
+                <ul>
+                    <li><a>菁英皮肤合集</a></li>
+                    <li><a>菁英模型预制</a></li>
+                    <li><a>优秀文字作品</a></li>
+                    <li><a>体素渲染作品</a></li>
+                </ul>
+                <!-- 列 3 -->
+                <ul>
+                    <li><a>在职成员档案</a></li>
+                    <li><a>管理组档案</a></li>
+                </ul>
+                <!-- 列 4 -->
+                <ul>
+                    <li><a>人事档案提交</a></li>
+                </ul>
+                <!-- 列 5 -->
+                <ul>
+                    <li><a>技术分享</a></li>
+                </ul>
+                <!-- 列 6 -->
+                <ul>
+                    <li><a>社团简介</a></li>
+                    <li><a>联系我们</a></li>
+                    <li><a>定制服务</a></li>
+                </ul>
+            </div>
+        </ul>
+    </div>
+
+    <!-- 背景logo -->
+    <div class="backLogo"></div>
+
+    <!-- 标题 -->
+    <div id="show_title">
+        定制服务
+    </div>
+
+    <!-- 筛选 -->
+    <div id="siftBox">
+        <ul>
+            <li class="siftCheck">个人用途</li>
+            <li>商业用途</li>
+        </ul>
+    </div>
+
+    <div id="inforBox" style="display: none;">
+        <div class="inforPersonal">
+            您现在选择的定制方式为“个人定制”，定制费率为100%（没有额外费用），定制后仅能用于个人使及个人作品使用，请勿用于商用收费行为或二次发布行为
+        </div>
+        <div class="inforCommercial">
+            您现在选择的定制方式为“商业定制”，定制费率为150%，定制后可用于个人使用，付费内容或二次发布
+        </div>
+    </div>
+
+    <!-- 详情页 -->
+    <div id="detailsMask" style="display: none;">
+        <div class="detailsBox">
+            <span class="title">MC皮肤定制</span>
+        </div>
+    </div>
+
+    <!-- 内容栏 -->
+    <div id="show_box">
+        <div class="businessList">
+            <ul>
+                <li>
+                    <div class="listImg" style="background-image:url(../static/businessImg1.png) ;"></div>
+                    <div class="listText">
+                        <span>MC皮肤定制</span>
+                        <br>
+                        <span>当前排单通畅</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="listImg" style="background-image:url(../static/businessImg2.png) ;"></div>
+                    <div class="listText">
+                        <span>体素模型定制</span>
+                        <br>
+                        <span>当前排单通畅</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="listImg" style="background-image:url(../static/businessImg3.png) ;"></div>
+                    <div class="listText">
+                        <span>MC渲染图定制</span>
+                        <br>
+                        <span>当前排单通畅</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="listImg" style="background-image:url(../static/businessImg4.png) ;"></div>
+                    <div class="listText">
+                        <span>像素插画|图标定制</span>
+                        <br>
+                        <span>当前排单通畅</span>
+                    </div>
+                </li>
+                <li class="freeBox">
+                    <div class="leftBox">
+                        <div class="listImg" style="background-image:url(../static/businessImg5.png) ;"></div>
+                        <div class="listText">
+                            <span>现有作品使用授权</span>
+                            <br>
+                            <span>FREE</span>
+                        </div>
+                    </div>
+                    <div class="rightBox">
+                        <span>个人用途-CC协议下免费使用</span><br><br>
+                        您现在选择的服务类型为“个人用途”，<br>
+                        故该服务不收取授权费用，<br>
+                        但请您务必遵守
+                        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">
+                            《署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)》
+                        </a>协议，<br>
+                        请勿私自用作商业用途，<br>
+                        黄金之匣美术工作社将有权追究违反该协议进行商业使用的用户
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+<!-- 顶部选项卡初始化 -->
+<script type="text/javascript" src="../WEB-INFO/js/topOption.js"></script>
+
+<script>
+    // 筛选功能
+    $("#siftBox ul").on("click", "li:not(.siftCheck)", function () {
+        $("#siftBox ul li").removeClass("siftCheck");
+        $(this).addClass("siftCheck");
+        $("#list_member_box ul li").fadeOut(100);
+        if ($(this).text() == "商业用途") {
+            $(".freeBox").addClass("commercial");
+            $($(".freeBox").children()[0].children[1].children[2]).text("价格需要面议");
+            $($(".freeBox").children()[0].children[1].children[2]).addClass("commercialPrice");
+        } else {
+            $(".freeBox").removeClass("commercial");
+            $($(".freeBox").children()[0].children[1].children[2]).text("FREE");
+            $($(".freeBox").children()[0].children[1].children[2]).removeClass("commercialPrice");
+        }
+    })
+</script>
+
+</html>

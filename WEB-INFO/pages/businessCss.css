@@ -1,0 +1,220 @@
+/* 全局设置 */
+body {
+    background-color: #eeeeee;
+}
+
+/* 复杂颜色定义 */
+* {}
+
+/* 标题样式 */
+#show_title {
+    width: 100%;
+    height: 100px;
+    font-size: 3em;
+    font-weight: 200;
+    padding-left: 100px;
+    line-height: 200%;
+    background-color: transparent;
+    position: relative;
+}
+
+/* 背景logo */
+.backLogo {
+    width: 800px;
+    height: 800px;
+    background-image: url(../../static/logoBg.png);
+    background-size: 100%;
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+/* 筛选框 */
+#siftBox {
+    width: auto;
+    height: auto;
+    padding-left: 100px;
+    position: relative;
+}
+
+#siftBox ul li {
+    width: 5em;
+    height: 30px;
+    float: left;
+    border: 2px solid gray;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 5px;
+    line-height: 25px;
+}
+
+#siftBox ul .siftCheck {
+    background-color: #363636;
+    color: white;
+}
+
+#siftBox ul li:not(.siftCheck):hover {
+    background-color: #D2D2D2;
+    transition: background-color 0.2s;
+}
+
+/* 详细信息 */
+#detailsMask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 50%);
+    z-index: 11;
+}
+
+#detailsMask .detailsBox {
+    width: 60vw;
+    height: 70vh;
+    padding: 20px;
+    position: absolute;
+    z-index: 10;
+    background-color: #eeeeee;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(0 0 0 / 40%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#detailsMask .detailsBox .title {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+/* 提示信息 */
+#inforBox {
+    width: calc(100% - 200px);
+    height: 60px;
+    margin: auto;
+    position: relative;
+    top: 20px;
+}
+
+#inforBox div {
+    width: 100%;
+    height: 100%;
+    background-color: #dddddd;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* 内容项 */
+#show_box {
+    width: calc(100% - 200px);
+    height: 75vh;
+    /* background-color: #86499B; */
+    background-color: transparent;
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 160px;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+#show_box .businessList ul {
+    clear: both;
+}
+/* #show_box .businessList ul:last-child {
+    position: relative;
+    top: 50px;
+} */
+
+#show_box .businessList ul li {
+    width: 200px;
+    height: 250px;
+    float: left;
+    margin: 10px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+    cursor: pointer;
+    background-color: #eeeeee;
+
+    transition: box-shadow 0.15s;
+}
+
+#show_box .businessList ul li:hover {
+    box-shadow: 0 0 10px rgb(0 0 0 / 80%);
+}
+
+#show_box .businessList ul li .listImg {
+    width: 100%;
+    height: 200px;
+    background-size: 100%;
+    background-position: center;
+}
+
+#show_box .businessList ul li .listText {
+    width: 100%;
+    height: calc(100% - 200px);
+    padding: 0px 10px;
+    overflow: hidden;
+}
+
+#show_box .businessList ul li .listText span:first-child {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#show_box .businessList ul li .listText span:last-child {
+    font-size: 14px;
+    font-weight: 600;
+    /* color: #962525; */
+    color: #0e7a00;
+}
+
+#show_box .businessList ul li .listText .commercialPrice {
+    color: #962525 !important;
+}
+
+#show_box .businessList ul .freeBox {
+    width: 200px;
+    transition: width 0.2s;
+    overflow: hidden;
+}
+
+#show_box .businessList ul .freeBox .leftBox {
+    width: 200px;
+    height: 250px;
+    float: left;
+}
+
+#show_box .businessList ul .freeBox .rightBox {
+    width: 0px;
+    height: 250px;
+    float: left;
+    background-color: white;
+    padding: 20px;
+    cursor: default;
+
+    transition: width 0.2s;
+}
+
+#show_box .businessList ul .freeBox .rightBox span {
+    font-weight: 600;
+    color: #0e7a00;
+}
+
+#show_box .businessList ul .freeBox .rightBox a {
+    color: blue;
+}
+
+#show_box .businessList ul .freeBox:not(.commercial):hover{
+    width: 700px;
+}
+
+#show_box .businessList ul .freeBox:not(.commercial):hover .rightBox {
+    width: calc(100% - 200px);
+}
