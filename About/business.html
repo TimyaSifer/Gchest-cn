@@ -84,12 +84,12 @@
     </div>
 
     <!-- 筛选 -->
-    <div id="siftBox">
+    <!-- <div id="siftBox">
         <ul>
             <li class="siftCheck">个人用途</li>
             <li>商业用途</li>
         </ul>
-    </div>
+    </div> -->
 
     <div id="inforBox" style="display: none;">
         <div class="inforPersonal">
@@ -101,15 +101,21 @@
     </div>
 
     <!-- 详情页 -->
-    <div id="detailsMask" style="display: none;">
+    <div id="detailsMask">
         <div class="detailsBox">
-            <span class="title">MC皮肤定制</span>
+            <span class="title">定制服务明细</span>
+            <span class="title quit">✖</span>
+            <div class="inforPersonal">
+                在线定制/授权功能离线中，请根据以下信息联系我们进行定制
+            </div>
+            <div><img src="../static/QRcode.png"></div>
         </div>
     </div>
 
     <!-- 内容栏 -->
     <div id="show_box">
         <div class="businessList">
+            <div class="listTitle">▋ 定制内容</div>
             <ul>
                 <li>
                     <div class="listImg" style="background-image:url(../static/businessImg1.png) ;"></div>
@@ -143,11 +149,15 @@
                         <span>当前排单通畅</span>
                     </div>
                 </li>
+
+            </ul>
+            <div class="listTitle">▋ 授权内容</div>
+            <ul>
                 <li class="freeBox">
                     <div class="leftBox">
                         <div class="listImg" style="background-image:url(../static/businessImg5.png) ;"></div>
                         <div class="listText">
-                            <span>现有作品使用授权</span>
+                            <span>作品个人使用授权</span>
                             <br>
                             <span>FREE</span>
                         </div>
@@ -164,6 +174,16 @@
                         黄金之匣美术工作社将有权追究违反该协议进行商业使用的用户
                     </div>
                 </li>
+                <li class="commercial">
+                    <div class="leftBox">
+                        <div class="listImg" style="background-image:url(../static/businessImg5.png) ;"></div>
+                        <div class="listText">
+                            <span>作品商业使用授权</span>
+                            <br>
+                            <span class="commercialPrice">价格需要面议</span>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
@@ -173,20 +193,38 @@
 <script type="text/javascript" src="../WEB-INFO/js/topOption.js"></script>
 
 <script>
-    // 筛选功能
-    $("#siftBox ul").on("click", "li:not(.siftCheck)", function () {
-        $("#siftBox ul li").removeClass("siftCheck");
-        $(this).addClass("siftCheck");
-        $("#list_member_box ul li").fadeOut(100);
-        if ($(this).text() == "商业用途") {
-            $(".freeBox").addClass("commercial");
-            $($(".freeBox").children()[0].children[1].children[2]).text("价格需要面议");
-            $($(".freeBox").children()[0].children[1].children[2]).addClass("commercialPrice");
-        } else {
-            $(".freeBox").removeClass("commercial");
-            $($(".freeBox").children()[0].children[1].children[2]).text("FREE");
-            $($(".freeBox").children()[0].children[1].children[2]).removeClass("commercialPrice");
-        }
+    // // 筛选功能
+    // $("#siftBox ul").on("click", "li:not(.siftCheck)", function () {
+    //     $("#siftBox ul li").removeClass("siftCheck");
+    //     $(this).addClass("siftCheck");
+    //     $("#list_member_box ul li").fadeOut(100);
+    //     if ($(this).text() == "商业用途") {
+    //         $(".freeBox").addClass("commercial");
+    //         $($(".freeBox").children()[0].children[1].children[2]).text("价格需要面议");
+    //         $($(".freeBox").children()[0].children[1].children[2]).addClass("commercialPrice");
+    //     } else {
+    //         $(".freeBox").removeClass("commercial");
+    //         $($(".freeBox").children()[0].children[1].children[2]).text("FREE");
+    //         $($(".freeBox").children()[0].children[1].children[2]).removeClass("commercialPrice");
+    //     }
+    // })
+
+    // 弹窗信息
+    $("#show_box .businessList ul").on("click", "li:not(.freeBox)", function () {
+        $("#detailsMask .detailsBox .title").not(".quit").text("定制服务明细");
+        $("#detailsMask").fadeIn(200);
+    })
+    // 弹窗 商用
+    $("#show_box .businessList ul").on("click", ".commercial", function () {
+        $("#detailsMask .detailsBox .title").not(".quit").text("商用授权明细");
+        $("#detailsMask").fadeIn(200);
+    })
+    //点击按钮或遮罩关闭窗口
+    $("#detailsMask,#detailsMask .detailsBox .quit").click(function () {
+        $("#detailsMask").fadeOut(200);
+    })
+    $("#detailsMask .detailsBox").click(function (e) {
+        e.stopPropagation();
     })
 </script>
 

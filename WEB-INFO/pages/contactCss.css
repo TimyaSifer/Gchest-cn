@@ -96,6 +96,8 @@ body {
     /* 标题样式 */
     #show_title {
         padding-left: 20px;
+        font-size: 2em;
+        height: 50px;
     }
 
     /* 内容项 */
