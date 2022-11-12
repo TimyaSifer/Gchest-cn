@@ -100,8 +100,8 @@ function groupSum() {
     }
     sum += parseInt(day);
     var leapYear = parseInt((year - 2016) / 4);
-    var last2016 = 302;
-    var totalTime = ((year - 2) - 2016) * 365 + last2016 + sum + leapYear;
+    var last2016 = 63;
+    var totalTime = ((year - 1) - 2016) * 365 + last2016 + sum + leapYear;
 
     $("#contentPage_1 .pageText_1 .text_1").text("自建立起已活跃了 " + totalTime + " 天");
     $("#show_box .show_big .show_text .introductionTime").text(totalTime);
