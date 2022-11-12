@@ -61,8 +61,8 @@ function daysum() {
 //         }
 //         sum += parseInt(day);
 //         var leapYear = parseInt((year - 2016) / 4);
-//         var last2016 = 302;
-//         var totalTime = ((year - 2) - 2016) * 365 + last2016 + sum + leapYear;
+//         var last2016 = 63;
+//         var totalTime = ((year - 1) - 2016) * 365 + last2016 + sum + leapYear;
 
 //         var totalH = timeMod.getHours();
 //         var totalM = timeMod.getMinutes();
