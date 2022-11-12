@@ -87,7 +87,6 @@ function groupSum() {
     var timeMod = new Date();
 
     var mon2 = 28;
-    var arr = [31, mon2, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
     var year = timeMod.getFullYear();
     var mon = timeMod.getMonth() + 1;
     var day = timeMod.getDate()
@@ -95,6 +94,7 @@ function groupSum() {
     if ((year % 4 == 0 & year % 100 != 0) || (year % 400 == 0)) {
         mon2 = 29;
     }
+    var arr = [31, mon2, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
     for (i = 0; i < mon - 1; i++) {
         sum += arr[i];
     }
